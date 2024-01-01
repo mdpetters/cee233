@@ -1,4 +1,4 @@
-Sitemap: https://mdpetters.github.io/cee200/sitemap.xml
+Sitemap: https://mdpetters.github.io/cee233/sitemap.xml
 
 User-agent: *
 Disallow:
