@@ -1,7 +1,7 @@
 # Syllabus
 
 #### Course Title
-CEE-200: Advanced Engineering Computation
+CEE-233: Advanced Air Pollution Control and Engineering
 
 #### Academic Department 
 Chemical and Environmental Engineering
@@ -14,7 +14,7 @@ Email: [markus.petters@ucr.edu](mailto:markus.petters@ucr.edu) \\
 Office Hours: Friday 3:50-4:50 pm (after class Discussion) 
 
 #### Course Description
-Develops problem-solving techniques for basic engineering systems including heat and mass transfer, coupled reactions, fluid flow potential, and control.
+Covers principles necessary to understand the atmospheric behavior of air pollutants. Topics include gas- and aerosol-phase chemistry, atmospheric diffusion, removal processes and residence times, and the formation and fate of gas and aerosol pollutants.
 
 #### Meeting Time/Location
 Lecture: Tu/Th 12:30 PM - 01:50 PM \\
@@ -22,21 +22,16 @@ Discussion: F 03:00 PM - 03:50 PM \\
 Location: Riverside Campus | Materials Sci and Engineering | Room 011 \\
 
 #### Course Materials
-Students will need access to a laptop computer with scientific computing software installed. The choice of software is up to the student and may be one of the following: MATLAB, Python, R, or Julia. Students need to be able to run git from the command line and be able to install add-on packages on their device. The computer will be needed to exams
+Students will need access to a laptop computer with scientific computing software installed. The choice of software is up to the student and may be one of the following: MATLAB, Python, R, or Julia. Students need to be able to run git from the command line and be able to install add-on packages on their device. The computer will be needed to complete exams. 
 
 #### Key Learning Outcomes
 \outcomes{
-*At the end of the term, participants will be able to write computer programs*
-1. to manipulate and solve differential equation using symbolic solvers
-2. to perform matrix-based regression and inversion problems on data
-3. to perform spectral analysis on data sets
-4. to solve ordinary differential equations using ODE solvers
-5. to perform discrete event system simulations of linear systems and interface those with control systems
-6. to solve partial differential equations using numerical methods
+*At the end of the term, participants will be able*
+1. to do this
 }
 
 #### Assessment
-Assessment of learning objectives will be through coding assignments and frequent exams. The homework assignments will require students to demonstrate that they are able to write the computer programs to perform the tasks taught in class.  
+Assessment of learning objectives will be through assignments and exams. 
 
 
 #### Evaluation of Student Performance
@@ -46,21 +41,42 @@ The grade components in the class include:
 | Activity      | Weight | Details                                                        |
 | --------------|--------|----------------------------------------------------------------|
 | Participation | 10%    | Attendance and in-class activities.                            |
-| Homework      | 40%    | Each module will have one or more graded homework assignments. |
-| Midterm Exams | 20%    | Two midterm exams are scheduled.                               |
+| Homework      | 30%    | Each module will have one or more graded homework assignments. |
+| Midterm Exam  | 10%    | One midterm exam.                                              |
+| Project       | 20%    | Term Project.                                                  |
 | Final Exam    | 30%    | The final exam is cumulative.                                  |
 
 The participation score will be based on physical presence and participation during in-class poll questions. The grade will be computed from the automatically generated grade book of the [Poll Everywhere](https://www.polleverywhere.com/home) platform. 
 
 Exams will mimic the homework assignments and are to be taken in person. They will be administered via GitHub Classroom. A laptop computer with appropriate software installed will be required for taking the exam.
 
-**Curve Policy:**
+**Definition of Letter Grades**
 
-I reserve the right to assign grades using a curve, should the class average be lower than expected.
+This Course uses Letter Grading: A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F, I, W. Grading policies follow [UCR Regulations](https://senate.ucr.edu/regulations/section/513/01)., Letter grades are defined as follows:
 
-*However, if I were to apply a curve, I would never reduce your grade. If you earned an 95/100 without a curve, you earned at minimum an A.*
+**A - Distinction, indicating exceptional achievement.** Mastery of course content at the highest level of attainment that can reasonably be expected of students at a given stage of development.
 
-In case I apply a curve, I take all of the total scores for the class and make a grade distribution. I then compute the average and standard deviation of the distribution. The mean and standard deviation are adjusted to updated values, thus resulting in a curved grade distribution.  
+**B - High pass, indicating more than minimal competence but less than exceptional achievement.** Strong performance demonstrating a high level of attainment for a student at a given stage of development.
+
+**C - Pass, indicating competence.** Totally acceptable performance demonstrating an adequate level of attainment for a student at a given stage of development.
+
+**D - Marginal pass.** This grade is used to recognize that a student’s performance was marginal but clearly better than that of students who receive an F.
+
+**F - Fail.** This grade is used to indicate that the student has failed the course and will not receive any credit for the course. The F grade indicates that the student’s performance in the required exercises has revealed almost no understanding of the course content.
+
+**I - Incomplete.** This grade is used as a temporary grade. At the discretion of the instructor, students may be given an GD grade for work not completed because of a serious interruption in their work not caused by the student’s negligence.
+
+**W - Withdrawal.** Used on student’s grade reports and transcripts to indicate all courses for which they have received official approval to drop or from which they have received official approval to withdraw after the deadlines for dropping.
+
+**Mastery Based Grading**
+
+This course will use mastery-based grading. Mastery based grading assigns letter grades "A" to "F" based on a point cutoff evaluated from the assignment rubric. 
+
+\note{
+Mastery based grading will never reduce your grade. If you earned an 95/100, you demonstrated mastery. The assignment difficulty is typically at a level that full credit can be achieved.
+}
+
+Under some circumstances I *may* allow resubmission of an assignment for you to demonstrate mastery. 
 
 **Absence Policy**
 
@@ -84,8 +100,36 @@ Late homework will receive no credit. An extension may be granted if the student
 - Pluto Notebooks: Pluto notebooks are used as reference text and demonstration of implementation of algorithms in computer language
 - Discussion Sessions: Discussion sessions are used for one-on-one instruction 
 
+#### Term Project
+You will be asked to select a topic that interests you (e.g. close to your research) and perform a literature review covering 10+ papers in the area. Towards the end of the semester, you will be asked to give a 15 min presentation on the topic, that introduces the question and discuss various approaches to answer it. The vision for this paper is an aerosol related section that may become part of your thesis work. Here are a few example topics:
+
+- The representation of aerosol (mass, or number, or chemistry) in global models
+- The role aerosol type X (e.g. dust, black carbon) in process Y (e.g. direct effect, contrail formation, …)- The effect of CCN emissions on cloud albedo
+- The role of light absorbing carbon in climate warming
+- Sources, activity, and distribution of biological ice nuclei
+- Modeling of organic aerosol mass downwind of megacities
+- The contribution of new particle formation to CCN concentrations
+- The role of biogenic gases (DMS, CH2I2) in aerosol-cloud interactions over the ocean
+- Measurement of aerosol chemical composition using mass spectrometry
+- Determination of particle shape using aerosol measurement techniques
+- The link between aerosol and visibility in national parks in the context of the regional haze rule
+
+You may pick whatever topic you like and are free to expand on the list, but you are required to set an appointment to discuss your proposed topic with one of the instructors beforehand. Evaluation rubrics will be distributed early in the semester to be used during the development and assessment of each component of the project. You will receive direct feedback from instructors on you first draft submission to help guide preparation of your final submission. Student presentations will be peer-evaluated. 
+
+Evaluation will focus on the following aspects
+- Selection of relevant and suitable papers (you will be asked to submit the reference list)
+- Conciseness of problem statement (first part of the presentation)
+- Synthesis of findings from the literature (the point is not to present findings from 10 papers sequentially but to synthesize the results into “understood” and “non-understood” aspects of the question. Synthesis means to be able to discuss the results at a meta-level and it is expected that quantitative synthesis (e.g. combination of data sources in tabular/graphical form, basic statistical analysis should be included)
+
+**Milestones**
+- TBD – Identification of title and 3-5 sentence abstract on envisioned scope
+- TBD – List of 10+ papers to be considered. 3-5 sentence summary on the content of each paper and why it was selected for the project
+- TBD – First draft of term paper due
+- TBD – 15 min presentation of term paper
+- TBD – Final draft of term paper is due 
+
 #### Readings and Recommended Texts
-Reading material is provided in the form of Pluto notebooks. Additional reading may be assigned on an ad-hoc basis.
+Reading material is provided in the form of online notebooks. Additional reading may be assigned on an ad-hoc basis.
 
 #### Academic Accommodations
 Students are encouraged to take an active role as their own advocates. They are not required to identify themselves as having a disability; however, students are not eligible for accommodations unless they self-identify. Students are responsible for visiting the SDRC office (Student Disability Resource Center, 125 Costo Hall (951) 827-4538, [http://sdrc.ucr.edu/](http://sdrc.ucr.edu/), and obtaining and delivering letters detailing appropriate accommodations to each of their instructors in a timely manner every quarter. 
@@ -123,8 +167,9 @@ Students may be required to disclose personally identifiable information to othe
 
 *Digital Course Components:* Digital course components include 
 - GitHub Classroom platform.
-- Canvas LMS
+- Canvas Learning Management System
 - PollEverywhere
+- Jupyter Hub (Participation is optional)
 
 #### Non-Discrimination Policy
 It is the policy of the University of California Riverside not to engage in discrimination against or harassment of any person employed or seeking employment with the University of California on the basis of race, color, national origin, religion, sex, gender, gender expression, gender identity, pregnancy, physical or mental disability, medical condition, genetic information, ancestry, marital status, age, sexual orientation, citizenship, or service in the uniformed services. Furthermore, University policy prohibits retaliation against any member of the University community filing a complaint of discrimination or harassment. This policy is intended to be consistent with the provisions of applicable State and Federal laws and University policies. 
@@ -149,7 +194,6 @@ The use of laptop computers or tablet to follow the notebooks during lectures is
 | Dec 12 | &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Reading Week   | Dec 14 | **Final Exam, 7-10 pm**  | Dec 15| &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No Meeting |
 
 I reserve the right to move the **midterm exams** to the Friday Discussion section should we need more time to cover material during regular class time.
-
 
 #### Survey
 Please fill out the survey to provide initial feedback on the course. 

@@ -11,9 +11,9 @@ ignore = ["", ""]
 
 # RSS (the website_{title, descr, url} must be defined to get RSS)
 generate_rss = false
-website_title = "CEE-200"
+website_title = "CEE-233"
 website_descr = "Course Website"
-website_url   = "https://mdpetters.github.io/cee200/"
+website_url   = "https://mdpetters.github.io/cee233/"
 +++
 
 \newcommand{\R}{\mathbb R}
@@ -26,4 +26,4 @@ website_url   = "https://mdpetters.github.io/cee200/"
 \newcommand{\caution}[1]{@@warning @@title **⚠ Caution**@@ @@content #1 @@ @@}
 \newcommand{\exercise}[1]{@@exercise @@title **⌨ Assignments**@@ @@content #1 @@ @@}
 
-@def prepath = "cee200"
+@def prepath = "cee233"
