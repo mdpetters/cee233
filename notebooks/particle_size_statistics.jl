@@ -474,6 +474,17 @@ The OPC technique can be used to measure particles > 60 nm. However, most OPCs o
 # Ambient Size Distributions
 """
 
+# ╔═╡ f02e30c5-7da5-40a7-8e8e-eb67576757e3
+md"""
+$(Resource(pops1_url, :width => 2500px))
+<table> <tr>
+  <td> <img src="figures/smps_schematic.png" alt="Drawing" style="width: 395px;"/> </td>
+  <td> <img src="figures/smps.jpg" alt="Drawing" style="width: 300px;"/> </td>
+</tr></table>
+pops.png
+**Figure 8.** (Left) Schematic of the SMPS. <i> Image Source:</i> Petters (2018), License CC BY-NC-ND 4.0. (Right) Commercial SMPS instrument. <i> Image Source: </i> manufacturer brochure.
+"""
+
 # ╔═╡ a928db35-b4d0-486a-9870-0d68464b4e2c
 begin
 	function get_csv()
@@ -1380,6 +1391,7 @@ version = "17.4.0+2"
 # ╟─812aae18-616d-4649-883d-caf028ab693b
 # ╟─d6df37c9-d86f-4e73-bcb9-fe776c7c817b
 # ╠═f10b12b0-4bc8-4d04-8848-ce0a7f391b10
+# ╠═f02e30c5-7da5-40a7-8e8e-eb67576757e3
 # ╠═a928db35-b4d0-486a-9870-0d68464b4e2c
 # ╟─9e6f74f4-c32b-4873-9870-40d0d432c382
 # ╟─00000000-0000-0000-0000-000000000001
