@@ -51,17 +51,15 @@ begin
 	md"""
 	$(TableOfContents(depth=5))
 	# Particle Size Statistics
-
-	Introduces measurement and mathematical description of the aerosol size distribution.
-
-	$(Markdown.MD(
-	Markdown.Admonition("warning", "Definition if an Aerosol", [md"An aerosol is a collection of airborne solid or liquid particles, with a typical size between 10 and 1000 nm. Aerosols may be of either natural or anthropogenic origin. "])))
 	"""
 end
 
 # ╔═╡ 4c2859cd-b599-41a5-a5eb-e34c6c35a74f
 md"""
-$(Resource(la_url, :width => 2500px))
+$(Markdown.MD(
+	Markdown.Admonition("warning", "Definition if an Aerosol", [md"An aerosol is a collection of airborne solid or liquid particles, with a typical size between 10 and 1000 nm. Aerosols may be of either natural or anthropogenic origin. Aerosols are sometimes, but not always visible as haze or smog."])))
+
+$(Resource(la_url))
 **Figure 1.** Smog over Los Angeles. Photo by David Iliff. License: CC BY-SA 3.0.
 
 Aerosols have acute and chronic negative impacts on human health and the environment. Aerosols scatter (redirect) light, which reduces visibility. The particles serve as condensation sites for water, thereby influencing the properties of clouds.
@@ -1698,13 +1696,13 @@ version = "17.4.0+2"
 
 # ╔═╡ Cell order:
 # ╟─70924856-fa28-4ca2-b024-95664a461213
-# ╠═4c2859cd-b599-41a5-a5eb-e34c6c35a74f
+# ╟─4c2859cd-b599-41a5-a5eb-e34c6c35a74f
 # ╟─f1eed054-7d08-4952-b739-d0cfc3b2549a
 # ╟─305ec81f-92a0-441b-a223-40b247c4d7eb
 # ╟─6c2236b1-06a4-4cd6-b323-c14dc531db3b
 # ╟─812aae18-616d-4649-883d-caf028ab693b
 # ╟─d6df37c9-d86f-4e73-bcb9-fe776c7c817b
-# ╠═f10b12b0-4bc8-4d04-8848-ce0a7f391b10
+# ╟─f10b12b0-4bc8-4d04-8848-ce0a7f391b10
 # ╟─a928db35-b4d0-486a-9870-0d68464b4e2c
 # ╟─184b3fb6-6baf-4948-b648-68dcc697a1f1
 # ╟─5b62c4dd-02b0-4621-b40a-2f2a96a5b316
