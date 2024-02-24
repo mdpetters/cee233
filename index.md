@@ -11,23 +11,35 @@ Markus Petters, Department of Chemical and Environmental Engineering \\
 Office: Center for Environmental Research & Technology of UCR | Room 128 \\
 Web: [https://mdpetters.github.io](https://mdpetters.github.io) \\
 Email: [markus.petters@ucr.edu](mailto:markus.petters@ucr.edu) \\
-Office Hours: Friday 3:50-4:50 pm (after class Discussion) 
+Office Hours: Tu 12:20-13:20 pm (after class) 
 
 #### Course Description
 Covers principles necessary to understand the atmospheric behavior of air pollutants. Topics include gas- and aerosol-phase chemistry, atmospheric diffusion, removal processes and residence times, and the formation and fate of gas and aerosol pollutants.
 
 #### Meeting Time/Location
-Lecture: Tu/Th 12:30 PM - 01:50 PM \\
-Discussion: F 03:00 PM - 03:50 PM \\
-Location: Riverside Campus | Materials Sci and Engineering | Room 011 \\
+Lecture: Tu/Th 11:00 AM - 12:20 PM \\
+Location: Riverside Campus | Humanities and Social Sciences | Room 1406 \\
+Discussion: Tu 10:00 AM - 10:50 AM \\
+Location: Riverside Campus | Student Success Center | Room 216 \\
 
 #### Course Materials
 Students will need access to a laptop computer with scientific computing software installed. The choice of software is up to the student and may be one of the following: MATLAB, Python, R, or Julia. Students need to be able to run git from the command line and be able to install add-on packages on their device. The computer will be needed to complete exams. 
 
-#### Key Learning Outcomes
+
+~~~
+Reading: <a href="https://www.wiley.com/en-us/Aerosol+Technology:+Properties,+Behavior,+and+Measurement+of+Airborne+Particles,+3rd+Edition-p-9781119494041"> Aerosol Technology </a> by William C. Hinds and Yifang Zhu.
+~~~
+
+
 \outcomes{
 *At the end of the term, participants will be able*
-1. to do this
+1. Know the characteristics, sources, and global distributions of different aerosol types. 
+2. Apply formalisms to describe the aerosol size distribution.
+3. Apply formalisms to describe the response of particles to external force fields and radiation.
+3. Explain the principles of aerosol measurements for common aerosol measurements.
+5. Explain the processes that contribute to the atmospheric burden of carbonaceous aerosols.
+7. Explain and apply theoretical models to describe aerosol processes including nucleation, evaporation/condensation, equilibrium water uptake, and equilibrium gas-particle partitioning.
+8. Design field measurements to evaluate emissions in the context of local meteorology.  
 }
 
 #### Assessment
@@ -93,7 +105,7 @@ Written verification from a from physician, lawyer, judge, or commanding officer
 Late homework will receive no credit. An extension may be granted if the student can document extenuating circumstances related to an extensive period of excused absence between the date that the homework assigned and the homework due date. In addition, *religious observances* or other *unanticipated life events* may interfere with class attendance and homework submission. These *may* qualify for an extension, provided sufficient documentation is presented.
 
 #### Methods of Student Instruction 
-- Slides: Slide deck presentation are used to deliver boilerplate content
+- Slides: Slide deck presentation are used to deliver content
 - Lecture Notes: Handwritten lecture notes are used to deliver key derivations
 - Poll Everywhere: In-class polling questions for formative assessments 
 - GitHub Classroom: GitHub Classroom is used for homework projects 
@@ -101,32 +113,21 @@ Late homework will receive no credit. An extension may be granted if the student
 - Discussion Sessions: Discussion sessions are used for one-on-one instruction 
 
 #### Term Project
-You will be asked to select a topic that interests you (e.g. close to your research) and perform a literature review covering 10+ papers in the area. Towards the end of the semester, you will be asked to give a 15 min presentation on the topic, that introduces the question and discuss various approaches to answer it. The vision for this paper is an aerosol related section that may become part of your thesis work. Here are a few example topics:
-
-- The representation of aerosol (mass, or number, or chemistry) in global models
-- The role aerosol type X (e.g. dust, black carbon) in process Y (e.g. direct effect, contrail formation, …)- The effect of CCN emissions on cloud albedo
-- The role of light absorbing carbon in climate warming
-- Sources, activity, and distribution of biological ice nuclei
-- Modeling of organic aerosol mass downwind of megacities
-- The contribution of new particle formation to CCN concentrations
-- The role of biogenic gases (DMS, CH2I2) in aerosol-cloud interactions over the ocean
-- Measurement of aerosol chemical composition using mass spectrometry
-- Determination of particle shape using aerosol measurement techniques
-- The link between aerosol and visibility in national parks in the context of the regional haze rule
-
-You may pick whatever topic you like and are free to expand on the list, but you are required to set an appointment to discuss your proposed topic with one of the instructors beforehand. Evaluation rubrics will be distributed early in the semester to be used during the development and assessment of each component of the project. You will receive direct feedback from instructors on you first draft submission to help guide preparation of your final submission. Student presentations will be peer-evaluated. 
-
+You are tasked to design a field campaign to validate aerosol emissions at urban scale. You can pick the location (metropolitan area), emission type (e.g. mobile vs. stationary), aerosol type (black carbon vs. secondary organic aerosol vs. inorganic sources). The main objective is to design a measurement campaign that is (1) feasible, (2) affordable, and (3) compelling. Feasible means that it is logistically possible to conduct the measurements. Examples of feasibility include site access, instrument availability, and personnel availability. Affordable means that you are limited in the number of high instruments you can deploy. An example of "non-affordable" would be a campaign that requires a fleet of specialized aircraft. Compelling means that the data will provide meaningful constraints on the emissions given the limitations of your sensors and the geographical area. Examples of "not compelling" would be insufficient sensitivity of the selected sensor(s), insufficient temporal or spatial coverage, or interference by factors outside of your control, including meteorological factors. 
+    
 Evaluation will focus on the following aspects
-- Selection of relevant and suitable papers (you will be asked to submit the reference list)
-- Conciseness of problem statement (first part of the presentation)
-- Synthesis of findings from the literature (the point is not to present findings from 10 papers sequentially but to synthesize the results into “understood” and “non-understood” aspects of the question. Synthesis means to be able to discuss the results at a meta-level and it is expected that quantitative synthesis (e.g. combination of data sources in tabular/graphical form, basic statistical analysis should be included)
+- Problem statement (description of the emission problem)
+- Feasibility analysis (is the project feasible)
+- Budget analysis (is the project affordable)
+- Engineering objectives analysis (is the project compelling)
 
 **Milestones**
-- TBD – Identification of title and 3-5 sentence abstract on envisioned scope
-- TBD – List of 10+ papers to be considered. 3-5 sentence summary on the content of each paper and why it was selected for the project
-- TBD – First draft of term paper due
-- TBD – 15 min presentation of term paper
-- TBD – Final draft of term paper is due 
+- April 9: Identification of title and 3-5 sentence abstract on envisioned scope
+- April 23: Problem statement and list of papers to be considered.
+- April 30: Campaign overview figure and outline of the proposed campaign
+- May 7: Feasibility and budget analysis
+- May 21: Engineering objective analysis
+- June 6: Presentation of project and final draft of term paper  
 
 #### Readings and Recommended Texts
 Reading material is provided in the form of online notebooks. Additional reading may be assigned on an ad-hoc basis.
@@ -178,22 +179,22 @@ It is the policy of the University of California Riverside not to engage in disc
 The use of laptop computers or tablet to follow the notebooks during lectures is permitted and encouraged.  
 
 #### Course Schedule
-| Tu     | Activity   | Th     | Activity   | F       | Activity   |
-|--------|------------|--------|------------|---------|------------|
-|        |            | Sep 28 | Syllabus   | Sep 29  | No Meeting |
-| Oct 3  | Lecture 1  | Oct 5  | Lecture 2  | Oct 6   | Discussion |
-| Oct 10 | Lecture 3  | Oct 12 | Lecture 4  | Oct 13  | Discussion |
-| Oct 17 | Lecture 5  | Oct 19 | Lecture 6  | Oct 20  | Discussion |
-| Oct 24 | Lecture 7  | Oct 26 | **Midterm 1**  | Oct 27  | Discussion |
-| Oct 31 | Lecture 8  | Nov 2  | Lecture 9 | Nov 3   | Discussion |
-| Nov 7  | Lecture 10 | Nov 9  | Lecture 11 | Nov 10  | Discussion |
-| Nov 14 | Lecture 12 | Nov 16 | Lecture 13 | Nov 17  | Discussion |
-| Nov 21 | Lecture 14 | Nov 23 | *Thanksgiving break* | Nov 24 | *Thanksgiving break* |
-| Nov 28 | Lecture 15 | Nov 30 | **Midterm 2** | Dec 1  | Discussion  |
-| Dec 5  | Lecture 16 | Dec 7  | Lecture 17 | Dec 8 | No Meeting |
-| Dec 12 | &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Reading Week   | Dec 14 | **Final Exam, 7-10 pm**  | Dec 15| &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No Meeting |
+| Tu     | Activity                   | Th     | Activity                     | 
+|--------|----------------------------|--------|------------------------------|
+| Apr 2  | Syllabus                   | Apr 4  | Introduction                 | 
+| Apr 9  | Aerosol Size Distribution  | Apr 11 | Kinetic Theory               |
+| Apr 16 | Uniform Particle Motion    | Apr 18 | Curvilinear Particle Motion  |
+| Apr 23 | Brownian Motion            | Apr 25 | Electrical Properties        | 
+| Apr 30 | Optical Properties         | May 2  | Evaporation and Condensation | 
+| May 7  | Coagulation                | May 9  | Aerosol Climatology          | 
+| May 14 | **Midterm**                | May 16 | Carbonaceous Aerosol         | 
+| May 21 | Gas-Particle Partitioning  | May 23 | Nucleation                   | 
+| May 28 | Aerosol-Water Interactions | May 30 | Air Pollution Meteorology    | 
+| Jun 4  | Backup Slot                | Jun 6  | Presentations                |
 
-I reserve the right to move the **midterm exams** to the Friday Discussion section should we need more time to cover material during regular class time.
+\note{
+**Final exam: Monday, June 10, 8:00 AM - 11:00 AM**
+}
 
 #### Survey
 Please fill out the survey to provide initial feedback on the course. 

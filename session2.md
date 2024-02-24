@@ -1,35 +1,37 @@
-
-# Vector Calculus
+# Aerosol Size Distribution
 
 Covers symbolic solvers and reviews key concepts in vector calculus with the objective to apply these operators in a computational context.  
 
+
 \learning{
-**By the end of this module you have learned**
-- how to use a symbolic solver to simplify, differentiate, and integrate equations. 
-- how to perform finite difference and automatic differentiation methods on functions.
-- how to fluently work with vectors and matrices in a computational environment.
-- how to perform vector calculus operations in a computational environment.
+*At the end of this lecture, participants will be able to*
+- Interpret aerosol size distributions graphed in various domains 
+- Apply the lognormal aerosol size distribution function to represent aerosol size distributions
+- Describe the principle of operation for scanning mobility particle sizers and optical particle counters
+- Name the dominant modes of the atmospheric size distribution 
+- Know particle sources and processes associated with each mode
+- Analyze ambient size distribution data and fit multimodal lognormal parameters
 }
 
 ## Slides and Lecture Notes
 
 ~~~
-Notes: <a href="https://drive.google.com/file/d/1fPim01vDPKJwwuxCCmNEnFZyARAIJ4R6/view?usp=sharing
-" target="_blank"> Oct 19, 2023</a>
+Notes: <a href=""> </a>
 ~~~
 
+~~~
+Notes: <a href=""> </a>
+~~~
 
 ## Notebooks
 
 ~~~
-Notebook 1: <a href="https://mdpetters.github.io/cee200/notebooks/sympy/" target="_blank"> A Short Introduction to SymPy </a> <br> <br>
-
-Notebook 2 : <a href="https://mdpetters.github.io/cee200/notebooks/vectors/" target="_blank"> A Review of Numeric Differentiation, Vectors, Matrices, and Vector Calculus</a>
+Notebook 1: <a href="">  </a> <br> <br>
 ~~~
 
 
 ## Homework
 
 \exercise{
-Due Oct 23, 2023: [https://classroom.github.com/a/UiQ-CDc1](https://classroom.github.com/a/Ta2D0neU) 
+Due Oct 23, 2023: []() 
 }
