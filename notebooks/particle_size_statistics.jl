@@ -28,22 +28,22 @@ begin
 
 	Logging.disable_logging(Logging.Warn)
 
-	la_url = "https://mdpetters.github.io/cee200/assets/Los_Angeles_Pollution.jpg" 
-	pops1_url = "https://mdpetters.github.io/cee200/assets/pops_schematic.png"
-	pops2_url = "https://mdpetters.github.io/cee200/assets/pops.png"
+	la_url = "https://mdpetters.github.io/cee233/assets/Los_Angeles_Pollution.jpg" 
+	pops1_url = "https://mdpetters.github.io/cee233/assets/pops_schematic.png"
+	pops2_url = "https://mdpetters.github.io/cee233/assets/pops.png"
 	
-    smps1_url = "https://mdpetters.github.io/cee200/assets/smps_schematic.png"
-	smps2_url = "https://mdpetters.github.io/cee200/assets/figures/smps.jpg"
+    smps1_url = "https://mdpetters.github.io/cee233/assets/smps_schematic.png"
+	smps2_url = "https://mdpetters.github.io/cee233/assets/figures/smps.jpg"
 
-	hfdma_url = "https://mdpetters.github.io/cee200/assets/hfdma.csv"
-	lhfdma_url = "https://mdpetters.github.io/cee200/assets/hfdma.csv"
-	uhfdma_url = "https://mdpetters.github.io/cee200/assets/uhfdma.csv"
-	rdma_url = "https://mdpetters.github.io/cee200/assets/rdma.csv"
-	lrdma_url = "https://mdpetters.github.io/cee200/assets/lrdma.csv"
-	urdma_url = "https://mdpetters.github.io/cee200/assets/urdma.csv"
-	pops_url ="https://mdpetters.github.io/cee200/assets/pops.csv"
-	lpops_url = "https://mdpetters.github.io/cee200/assets/lpops.csv"
-	upops_url = "https://mdpetters.github.io/cee200/assets/upops.csv"
+	hfdma_url = "https://mdpetters.github.io/cee233/assets/hfdma.csv"
+	lhfdma_url = "https://mdpetters.github.io/cee233/assets/hfdma.csv"
+	uhfdma_url = "https://mdpetters.github.io/cee233/assets/uhfdma.csv"
+	rdma_url = "https://mdpetters.github.io/cee233/assets/rdma.csv"
+	lrdma_url = "https://mdpetters.github.io/cee233/assets/lrdma.csv"
+	urdma_url = "https://mdpetters.github.io/cee233/assets/urdma.csv"
+	pops_url ="https://mdpetters.github.io/cee233/assets/pops.csv"
+	lpops_url = "https://mdpetters.github.io/cee233/assets/lpops.csv"
+	upops_url = "https://mdpetters.github.io/cee233/assets/upops.csv"
 
 	md"""
 	$(TableOfContents(depth=5))
@@ -52,7 +52,7 @@ begin
 	Introduces measurement and mathematical description of the aerosol size distribution.
 
 	$(Markdown.MD(
-	Markdown.Admonition("warning", "Definition", [md"Aerosol are a collection of airborne solid or liquid particles, with a typical size between 10 and 1000 nm. Aerosols may be of either natural or anthropogenic origin. "])))
+	Markdown.Admonition("warning", "Definition if an Aerosol", [md"An aerosol is a collection of airborne solid or liquid particles, with a typical size between 10 and 1000 nm. Aerosols may be of either natural or anthropogenic origin. "])))
 	"""
 end
 
@@ -450,6 +450,7 @@ Aerosol flows through an annulus gap. An electric potential is applied between t
 
 The SMPS technique can used to measure particles between 1-1000 nm. However, a single instrument us limited to a narrower range which is determined by the length of the column and the flow rate through the instrument.
 
+$(Resource(pops_url, :width => 2500px))
 <table> <tr>
   <td> <img src="figures/smps_schematic.png" alt="Drawing" style="width: 395px;"/> </td>
   <td> <img src="figures/smps.jpg" alt="Drawing" style="width: 300px;"/> </td>
@@ -1372,13 +1373,13 @@ version = "17.4.0+2"
 
 # ╔═╡ Cell order:
 # ╠═70924856-fa28-4ca2-b024-95664a461213
-# ╟─4c2859cd-b599-41a5-a5eb-e34c6c35a74f
+# ╠═4c2859cd-b599-41a5-a5eb-e34c6c35a74f
 # ╟─f1eed054-7d08-4952-b739-d0cfc3b2549a
 # ╟─305ec81f-92a0-441b-a223-40b247c4d7eb
 # ╟─6c2236b1-06a4-4cd6-b323-c14dc531db3b
 # ╟─812aae18-616d-4649-883d-caf028ab693b
 # ╟─d6df37c9-d86f-4e73-bcb9-fe776c7c817b
-# ╟─f10b12b0-4bc8-4d04-8848-ce0a7f391b10
+# ╠═f10b12b0-4bc8-4d04-8848-ce0a7f391b10
 # ╠═a928db35-b4d0-486a-9870-0d68464b4e2c
 # ╟─9e6f74f4-c32b-4873-9870-40d0d432c382
 # ╟─00000000-0000-0000-0000-000000000001
