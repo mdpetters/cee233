@@ -469,22 +469,18 @@ The OPC technique can be used to measure particles > 60 nm. However, most OPCs o
 
 # ╔═╡ a928db35-b4d0-486a-9870-0d68464b4e2c
 begin
-	function get_csv()
-	        hfdma = CSV.read("scripts/hfdma.csv", DataFrame)
-	        lhfdma = CSV.read("scripts/lhfdma.csv", DataFrame)
-	        uhfdma = CSV.read("scripts/uhfdma.csv", DataFrame)
-	        rdma = CSV.read("scripts/rdma.csv", DataFrame)
-	        lrdma = CSV.read("scripts/lrdma.csv", DataFrame)
-	        urdma = CSV.read("scripts/urdma.csv", DataFrame)
-	        pops = CSV.read("scripts/pops.csv", DataFrame)
-	        lpops = CSV.read("scripts/lpops.csv", DataFrame)
-	        upops = CSV.read("scripts/upops.csv", DataFrame)
-	        hfdma, lhfdma, uhfdma, rdma, lrdma, urdma, pops, lpops, upops
-	end
+	hfdma = CSV.read(HTTP.get(hfdma_url).body, DataFrame)
+	lhfdma = CSV.read(HTTP.get(lhfdma_url).body, DataFrame)
+	uhfdma = CSV.read(HTTP.get(uhfdma_url).body, DataFrame)
+	rdma = CSV.read(HTTP.get(rdma_url).body, DataFrame)
+	lrdma = CSV.read(HTTP.get(lrdma_url).body, DataFrame)
+	urdma = CSV.read(HTTP.get(urdma_url).body, DataFrame)
+	pops = CSV.read(HTTP.get(pops_url).body, DataFrame)
+	lpops = CSV.read(HTTP.get(lpops_url).body, DataFrame)
+	upops = CSV.read(HTTP.get(upops_url).body, DataFrame)
 
 	function aerosol_app2(j)
 		Gadfly.set_default_plot_size(20Gadfly.cm, 8Gadfly.cm)
-		hfdma, lhfdma, uhfdma, rdma, lrdma, urdma, pops, lpops, upops = get_csv()
 		Dhf = convert(Vector, hfdma[1,2:end])
 		Shf = convert(Matrix, hfdma[2:end,2:end])
 		Slhf = convert(Matrix, lhfdma[2:end,2:end])
