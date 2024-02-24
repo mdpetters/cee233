@@ -39,7 +39,7 @@ begin
 	smps2_url = "https://mdpetters.github.io/cee233/assets/smps.jpg"
 
 	hfdma_url = "https://mdpetters.github.io/cee233/assets/hfdma.csv"
-	lhfdma_url = "https://mdpetters.github.io/cee233/assets/hfdma.csv"
+	lhfdma_url = "https://mdpetters.github.io/cee233/assets/lhfdma.csv"
 	uhfdma_url = "https://mdpetters.github.io/cee233/assets/uhfdma.csv"
 	rdma_url = "https://mdpetters.github.io/cee233/assets/rdma.csv"
 	lrdma_url = "https://mdpetters.github.io/cee233/assets/lrdma.csv"
@@ -64,9 +64,9 @@ md"""
 $(Resource(la_url, :width => 2500px))
 **Figure 1.** Smog over Los Angeles. Photo by David Iliff. License: CC BY-SA 3.0.
 
-Aerosols have acute and chronic negative impacts on human health and the environment. Aerosols scatter (redirect) light, which reduces visibility. The particles serve as condensation sites for water, thereby influencing the properties of clouds. 
+Aerosols have acute and chronic negative impacts on human health and the environment. Aerosols scatter (redirect) light, which reduces visibility. The particles serve as condensation sites for water, thereby influencing the properties of clouds.
 
-Particle number concentration and particle size are the most critical properties determining how aerosol interacts with the body, the atmosphere, and light. These two properties are described by the particle size distribution. In addition to help assessing aerosol impacts, particle size distributions also provide information about the sources and age of particles.
+The aerosol size distribution is one of the most critical properties that determines how aerosol interacts with the body, the atmosphere, and light. In addition to helping assess aerosol impacts on the environment, the particle size distributions also provide information about the sources and age of particles.
 
 ## Tabular Represenation
 """
@@ -281,12 +281,71 @@ begin
 	
 	    hstack(p1,p2)
 	end
+
+    function aerosol_figure9()
+	    Gadfly.set_default_plot_size(20Gadfly.cm, 16Gadfly.cm)
+	    colors = ["black", "darkred", "steelblue3"]
+	
+	    𝕟 = lognormal([[200, 80, 1.2]]; d1 = 30.0, d2 = 300.0, bins = 10)
+	    𝕗 = lognormal([[200, 80, 1.2]]; d1 = 30.0, d2 = 300.0, bins = 500); 
+	
+	    xlabel = log10.([30, 50, 100, 200, 300])
+	    lfunx = x->ifelse(sum(x .== xlabel) == 1, @sprintf("%i",exp10(x)), "")
+	
+	    p1 = plot(layer(x=𝕗.Dp, y = 𝕗.S, Geom.line, Gadfly.style(default_color=colorant"black")),
+	            layer(xmin = 𝕟.De[1:end-1], xmax = 𝕟.De[2:end], y = 𝕟.S, Geom.bar), 
+	            Theme(default_color="steelblue3"),
+	            Guide.xlabel("Particle diameter (nm)"),
+	            Guide.ylabel("dN/dlnD (cm⁻³)"),
+	            Guide.title("Number Spectral Density"),
+	            Guide.xticks(ticks = log10.([30:10:100;200;300])),
+	            Scale.x_log10(labels = lfunx),
+	            Coord.cartesian(xmin=log10(30), xmax=log10(300))) 
+	
+	    p2 = plot(layer(x=𝕗.Dp, y = 𝕗.S.*π.*(𝕗.Dp.*1e-3).^2.0, Geom.line,
+	            Gadfly.style(default_color=colorant"black")),
+	            layer(xmin = 𝕟.De[1:end-1], xmax = 𝕟.De[2:end], y = 𝕟.S.*π.*(𝕟.Dp.*1e-3).^2.0, Geom.bar), 
+	            Theme(default_color="steelblue3"),
+	            Guide.xlabel("Particle diameter (nm)"),
+	            Guide.ylabel("dS/dlnD (μm² cm⁻³)"),
+	            Guide.title("Surface Area Spectral Density"),
+	            Guide.xticks(ticks = log10.([30:10:100;200;300])),
+	            Scale.x_log10(labels = lfunx),
+	            Coord.cartesian(xmin=log10(30), xmax=log10(300))) 
+	
+	    p3 = plot(layer(x=𝕗.Dp, y = 𝕗.S.*π.*(𝕗.Dp.*1e-3).^3.0./6.0, Geom.line,
+	            Gadfly.style(default_color=colorant"black")),
+	            layer(xmin = 𝕟.De[1:end-1], xmax = 𝕟.De[2:end], y = 𝕟.S.*π.*(𝕟.Dp.*1e-3).^3.0./6.0, Geom.bar), 
+	            Theme(default_color="steelblue3"),
+	            Guide.xlabel("Particle diameter (nm)"),
+	            Guide.ylabel("dV/dlnD (μm³ cm⁻³)"),
+	            Guide.title("Volume  Spectral Density"),
+	            Guide.xticks(ticks = log10.([30:10:100;200;300])),
+	            Scale.x_log10(labels = lfunx),
+	            Coord.cartesian(xmin=log10(30), xmax=log10(300))) 
+	
+	    p4 = plot(layer(x=𝕗.Dp, y = 𝕗.S.*π.*(𝕗.Dp.*1e-3).^3.0./6.0*2.0, Geom.line,
+	            Gadfly.style(default_color=colorant"black")),
+	            layer(xmin = 𝕟.De[1:end-1], xmax = 𝕟.De[2:end], y = 𝕟.S.*π.*(𝕟.Dp.*1e-3).^3.0./6.0*2.0, Geom.bar), 
+	            Theme(default_color="steelblue3"),
+	            Guide.xlabel("Particle diameter (nm)"),
+	            Guide.ylabel("dM/dlnD (μg m⁻³)"),
+	            Guide.title("Mass Spectral Density"),
+	            Guide.xticks(ticks = log10.([30:10:100;200;300])),
+	            Scale.x_log10(labels = lfunx),
+	            Coord.cartesian(xmin=log10(30), xmax=log10(300))) 
+	
+	    vstack(hstack(p1,p2),hstack(p3,p4))
+	end
+
 	
 	aerosol_table1()
 end
 
 # ╔═╡ 305ec81f-92a0-441b-a223-40b247c4d7eb
 md"""
+**Table 1.** Dlow is the lower bound diameter and Dup is the upper bound diameter of a size bin in nm. N is the number concentration of particles that falls into that size bin in ``cm^{-3}``.
+
   $(aerosol_figure1()) 
 **Figure 2.** The same size distribution as in the table plotted as a histogram.
 
@@ -302,7 +361,7 @@ md"""
 **Figure 3.** The same size distribution as in Figure 2 but varying the number of bins. Left measured using 10 bins and right measured using 40 bins.
 
 $(Markdown.Admonition("note", "B Exercises", [md"
-1. Explain why the left and right y-axis are different.
+1. Explain why the y-values of the left and right histogram are different.
 2. What would happen to the number observed in a size bin if the number of bins were to be increased to a very large number (e.g. 10000)?"]))
 
 ## Spectral Density
@@ -426,6 +485,8 @@ Explore how the parameters of the lognormal function influence the distribution.
 2. What does ``\sigma_{g}`` represent?
 
 3. Move the sliders and observe the change in the legend. Verify that 68.21% of particles fall within the shaded area defined by ``{D_{pg}}/{\sigma_g} < D_p < D_{pg}\sigma_g``. Verify for at least three combinations of ``\{N_t, D_{pg},\sigma_g\}``
+
+4. Assume you are provided with a plot of the size distribution that shows ``D_pg`` (red) and the spread (blue). Use this information from the legend reconstruct the observed ``\sigma_g``.  
 "]))
 
 """
@@ -440,7 +501,7 @@ Many techniques to measure size distributions exist. Two common instrument are t
 
 Aerosol flows through an annulus gap. An electric potential is applied between the inner and outer column. The electric potential drags charged particles through a sheath flow. Charged particles within a narrow electrical mobility band are steered to a sample slit. The electric potential selects a narrow size range. Particles within this size range are counted using a condensation particle counter. Scanning the electric potential with time, usually over a 1-5 min period produces a particle size distribution. 
 
-The SMPS technique can used to measure particles between 1-1000 nm. However, a single instrument us limited to a narrower range which is determined by the length of the column and the flow rate through the instrument.
+The SMPS technique can used to measure particles between 1-1000 nm. However, a single instrument is limited to a narrower range which is determined by the length of the column and the flow rate through the instrument.
 
 |                     |                      |
 |---------------------|----------------------|
@@ -463,10 +524,6 @@ The OPC technique can be used to measure particles > 60 nm. However, most OPCs o
 # Ambient Size Distributions
 """
 
-# ╔═╡ 6d53b749-00ce-4c63-a140-5a4653b2717a
-	sunspot_data = CSV.read(HTTP.get(hfdma_url).body, DataFrame)
-
-
 # ╔═╡ a928db35-b4d0-486a-9870-0d68464b4e2c
 begin
 	hfdma = CSV.read(HTTP.get(hfdma_url).body, DataFrame)
@@ -479,44 +536,229 @@ begin
 	lpops = CSV.read(HTTP.get(lpops_url).body, DataFrame)
 	upops = CSV.read(HTTP.get(upops_url).body, DataFrame)
 
+	@bind tindex combine() do Child
+	md"""
+	Time Index   $(
+		Child(Slider(1:1:49, default = 18, show_value = true))
+	) 
+	"""
+end
+end
+
+# ╔═╡ 184b3fb6-6baf-4948-b648-68dcc697a1f1
+begin
+	function mode_figure()
+		xlabel = log10.([1, 10, 100, 1000, 10000])
+		colors = ["black", "darkred", "darkgoldenrod", "steelblue3", "purple", "black"]
+		lfunx = x->ifelse(sum(x .== xlabel) == 1, @sprintf("%i",exp10(x)), "")
+		n0 = lognormal([[3000, 7, 1.2]]; d1 = 1.0, d2 = 100.0, bins = 1000)
+		l0 = layer(x=n0.Dp, y = n0.S, Geom.line, color = ["Nucleation Mode" for i=1:100], Theme(line_width=2pt))
+		n1 = lognormal([[4900, 30, 1.6]]; d1 = 1.0, d2 = 300.0, bins = 1000)
+		l1 = layer(x=n1.Dp, y = n1.S, Geom.line, color = ["Aitken Mode" for i=1:1000],
+		Theme(line_width=2pt))
+		n2 = lognormal([[900, 150, 1.7]]; d1 = 1.0, d2 = 10000.0, bins = 1000)
+		l2 = layer(x=n2.Dp, y = n2.S, Geom.line, color = ["Accumulation Mode" for i=1:1000],
+		Theme(line_width=2pt))
+		n3 = lognormal([[300, 2000, 1.9]]; d1 = 1.0, d2 = 10000.0, bins = 1000)
+		l3 = layer(x=n3.Dp, y = n3.S, Geom.line, color = ["Coarse Mode" for i=1:1000], Theme(line_width=2pt))
+
+		n4 = lognormal([[3000, 7, 1.2], [4900, 30, 1.6], [800, 150, 1.7], [300, 2000, 1.9]]; d1 = 1.0, d2 = 10000.0, bins = 1000)
+		l4 = layer(x=n4.Dp, y = n4.S, Geom.line, color = ["Sum of Modes" for i=1:1000], linestyle=[:dot])
+		p1 = plot(l4, l0, l1, l2, l3, 
+			Guide.xlabel("Particle diameter (nm)"),
+			Guide.ylabel("dN/dlnD (cm⁻³)"),
+			Scale.color_discrete_manual(colors...),
+			Guide.xticks(ticks = log10.(gengrid([1,10,100,1000]))),
+			Scale.x_log10(labels = lfunx),
+			Coord.cartesian(xmin=log10(1), xmax=log10(10000)))
+	end
 	function aerosol_app2(j)
-		Gadfly.set_default_plot_size(20Gadfly.cm, 8Gadfly.cm)
-		Dhf = convert(Vector, hfdma[1,2:end])
-		Shf = convert(Matrix, hfdma[2:end,2:end])
-		Slhf = convert(Matrix, lhfdma[2:end,2:end])
-		Suhf = convert(Matrix, uhfdma[2:end,2:end])
-		Drd = convert(Vector, rdma[1,2:end])
-		Srd = convert(Matrix, rdma[2:end,2:end])
-		Slrd = convert(Matrix, lrdma[2:end,2:end])
-		Surd = convert(Matrix, urdma[2:end,2:end])
+		Gadfly.set_default_plot_size(18Gadfly.cm, 8Gadfly.cm)
+		Dhf = Vector(hfdma[1,2:end])
+		Shf = Matrix(hfdma[2:end,2:end])
+		Slhf = Matrix(lhfdma[2:end,2:end])
+		Suhf = Matrix(uhfdma[2:end,2:end])
+		Drd = Vector(rdma[1,2:end])
+		Srd = Matrix(rdma[2:end,2:end])
+		Slrd = Matrix(lrdma[2:end,2:end])
+		Surd = Matrix(urdma[2:end,2:end])
 		
 		t = collect(skipmissing(hfdma[2:end,1]))
 		
-		Dpo = convert(Vector, pops[1,2:end])
-		Spo = convert(Matrix, pops[2:end,2:end])
-		Slpo = convert(Matrix, lpops[2:end,2:end])
-		Supo = convert(Matrix, upops[2:end,2:end])
+		Dpo = Vector(pops[1,2:end])
+		Spo = Matrix(pops[2:end,2:end])
+		Slpo = Matrix(lpops[2:end,2:end])
+		Supo = Matrix(upops[2:end,2:end])
 		
 		colors = ["darkgoldenrod3", "darkred", "steelblue3", "darkgrey"]
 		xlabel = log10.([5, 10, 20, 50, 100, 200, 500, 1000, 2000])
 		lfunx = x->ifelse(sum(x .== xlabel) == 1, @sprintf("%i",exp10(x)), "")
+		cfun(c) = RGBA{Float32}(c.r,c.g,c.b,1)
 		
 		l0 = layer(x=Dhf, y = Shf[j,:], ymin=Slhf[j,:], ymax=Suhf[j,:], 
-			Geom.line, Geom.ribbon, color = ["SMPS2" for i=1:length(Dhf)], Theme(alphas=[0.2],lowlight_color=cfun))
+			Geom.line, Geom.ribbon, color = ["SMPS2" for i=1:length(Dhf)], Theme(alphas=[0.3],lowlight_color=cfun))
 		l1 = layer(x=Drd, y = Srd[j,:], ymin=Slrd[j,:], ymax=Surd[j,:], 
-			Geom.line, Geom.ribbon, color = ["SMPS1" for i=1:length(Drd)], Theme(alphas=[0.2],lowlight_color=cfun))
+			Geom.line, Geom.ribbon, color = ["SMPS1" for i=1:length(Drd)], Theme(alphas=[0.3],lowlight_color=cfun))
 		l2 = layer(x=Dpo, y = Spo[j,:], ymin=Slpo[j,:], ymax=Supo[j,:], 
-			Geom.line, Geom.ribbon,   color = ["OPC" for i=1:length(Dpo)], Theme(alphas=[0.2],lowlight_color=cfun))
-		p1 = plot(l1,l0, l2,
-				Guide.xlabel("Particle diameter (nm)"),
-				Guide.ylabel("dN/dlnD (cm⁻³)"),
-				Guide.title("Composite Size Distribtion $(t[j])"),
-				Scale.color_discrete_manual(colors...),
-				Guide.xticks(ticks = log10.(gengrid([1,10,100,1000]))),
-				Scale.x_log10(labels = lfunx),
-				Coord.cartesian(xmin=log10(4), xmax=log10(3000)))
+			Geom.line, Geom.ribbon,   color = ["OPC" for i=1:length(Dpo)], Theme(alphas=[0.3],lowlight_color=cfun))
+		p1 = plot(l1,l0,l2,
+			Guide.xlabel("Particle diameter (nm)"),
+			Guide.ylabel("dN/dlnD (cm⁻³)"),
+			Guide.title("Composite Size Distribtion $(t[j])"),
+			Scale.color_discrete_manual(colors...),
+			Guide.xticks(ticks = log10.(gengrid([1,10,100,1000]))),
+			Scale.x_log10(labels = lfunx),
+			Coord.cartesian(xmin=log10(4), xmax=log10(3000)))
 	end
+
+md"""	
+## Example Temporal Evolution
+
+$(aerosol_app2(tindex[1]))
+**Figure 10.** One day of aerosol size distribution data collected in Raleigh, NC, November 2019. The observations are using two SMPS instruments and one POPS optical particle counter. The distributions are a 30 min time average. The composite size distribution is obtained by stiching the three instruments together. Shaded areas show the 5% to 95% interquartile range of the observations.
+
+$(Markdown.Admonition("note", "H Exercises", [md"
+1. Use the slider to explore how the size distribution changes during the one day period. Analyze the output and write down at minimum three conclusions you can make based the data.
+2. In your own words, describe how an SMPS and an OPC measure the particle size distribution.
+3. List at least one advantage and one disadvantage of the optical particle counter (OPC) and scanning mobility particle sizer (SMPS)"]))
+
+## Multimodal  Size Distributions
+
+The data shows that that aerosol size distribution typically consists of 2-4 modes. Each mode is approximately lognormaldistributed. The total size distribution is discribed by the sum of the modes:
+
+```math
+\frac{dN}{d\ln D_p} = \sum_{i=1}^n \frac{N_{t,i}}{\sqrt{2\pi}\ln\sigma_{g,i}} \exp \left(- \frac{\left[\ln D_p-\ln D_{pg,i}\right]^2}{2\ln \sigma_{g,i}^2}\right)
+```
+
+where ``\frac{dN}{d\ln D_p}`` is the spectral number density, ``N_{t,i}`` is the total number concentration, ``\sigma_{g,i}`` is the geometric standard deviation, and ``D_{pg,i}`` is the geometric mean diameter of the ``i^{th}`` mode, and ``n`` is the number of modes. 
+
+$(mode_figure())
+**Figure 11.** Schematic representation of a multimodal lognormal distribution function. The number concentration in the coarse mode is exagerated to make it visibile. 
+
+The four modes have been referred to by various names, depending on the author. However, commone names and associated sources with these modes are:
+
+**1. Nucleation Mode:** Particles below 10 nm. These particles have been newly formed either by homogeneous nucleation in the atmosphere or by nucleation processes that occur within the emissions from high temperature sources and lead to the emission of primary nucleation mode particles. Homogenous nucleation is the processes by which low volatility gas-phase compounds form spontaneously new solid or liquid particles. For example, sulfuring acid (H2SO4) is formed from the atmospheric oxidation of SO2. This H2SO4 can nucleate and form sulfate aerosol.
+
+**2. Aitken Mode:** Particles beween 10-80 nm. Names after the meteorologist John Aitken (1839 – 14 November 1919) who discovered these particles. Sources of Aitken mode particles include direct emissions, e.g. from vehicle exhaust, and growth of nucleation mode particles by condensation of vapors.
+
+**3. Accumulation Mode:** Particles between 80-1000 nm. Named for their long lifetime in the atmosphere (7-30 days). Brownian motion and settling velocity of these particles is small. Therefore these particle accumulate in the atmosphere. Accumulation mode particles form from the growth of Aitken mode particles by condensation and by coagulation.  Further growth is inhibited because they do not coagulate as rapidly as fine particles and do not settle like coarse particles. Accumulation particles can be efficiently removed by rain.
+
+**4. Coarse Mode:** Particles > 1000 nm in diameter. Coarse mode particles are generated mechanically. Sources include wind-blown soil/desert dusts, industrial emissions, biological particles (bacteria, viruses) and sea-spray aerosol. Gravitational settling is fast, which reduces the atmospheric lifetime of these particles relative to those of the accumulation mode. 
+
+"""
+	end
+
+# ╔═╡ 5b62c4dd-02b0-4621-b40a-2f2a96a5b316
+md"""
+# Moment Distributions
+
+Aerosol concentration can be characterized in terms of number concentration, surface area concentration, volume concentration, and mass concentration. As a rule of thumb:
+
+- Number concentration is important to assess aerosol impacts on clouds and climate
+- Surface area concentration is important to assess aerosol impacts on light scattering and surface mediated processes such as condensation, chemical reaction on particle surfaces, and ice nucleation
+- Volume/Mass concentration is important to assess aerosol impacts on human health and the environment (e.g. nutrient cycling)
+
+Surface area, volume, and mass concentration can be derived from the size distribution
+
+```math
+S=\pi D_{p}^{2}N
+```
+
+```math
+V=\frac{\pi}{6}D_{p}^{3}N
+```
+
+```math
+M=\frac{\pi}{6}D_{p}^{3}N\rho_{p}
+```
+
+where ``\rho_{p}`` is the particle density. The midpoint diameter of the bin, ``D_{p}=(D_{low}+D_{up})/2``, should be used in the calculation.
+
+## Tabular Representation
+$(aerosol_table3())
+**Table 3.** Dlow and Dup are the lower and upper bound particle diameters in nm. Dp is the calulated midpoint diameter. N is the number concentration in the bin in units of ``cm^{-3}``. Columns 1,2, and 4 are the same as Table 1. S, V, and M are the surface area in ``\mu m^{2}\;cm^{-3}``, volume concentration in ``\mu m^{3}\;cm^{-3}`` and mass concentration in ``\mu g\;m^{-3}`` using the formulae above. A particle density of ``2 g cm^{-3}`` is assumed. Example calculations for row 3 are as follows:
+
+```math
+S=\pi D_{p}^{2}N=3.1415\times(54\times10^{-3}\;\mu m)^{2}\times9\;cm^{-3}=0.082\;\mu m^{2}\;cm^{-3}
+```
+
+```math
+V=\pi/6D_{p}^{3}N=3.1415 /6 \times(54\times10^{-3}\;\mu m)^{3}\times9\;cm^{-3}=0.00073\;\mu m^{3}\;cm^{-3}
+```
+
+```math
+\begin{array}
+\\M=\pi/6D_{p}^{3}N =3.1415 / 6 \times(54\times10^{-3}\;\mu m)^{3}\times9\;cm^{-3}\times2\;g\;cm^{-3}\times10^{6}\;\mu g\;g^{-1} \\
+\times10^{-18}\;m^{3}\;\mu m^{-3}\times10^{12}\;cm^{6}\;m^{-6}=0.0015\;\mu g\;m^{-3}
+\end{array}
+
+```
+
+$(Markdown.MD(
+	Markdown.Admonition("warning", "Important Shortcut", [md"
+Note that for mass calculations, if the density is ``1000\; kg\;m^{-3} = 1\; g\; cm^{-3}``, the volume concentration in ``\mu m^{3}\;cm^{-3}`` equals to the mass concentration in ``\mu g\;m^{-3}``. This is an important conversion and explains why ``\mu m^{3}\;cm^{-3}`` is the preferred unit for volume concentration."])))
+
+Important mass fractions of the aerosol are PM1, PM2.5 and PM10, denoting  particulate matters with D < 1 μm, 2.5 μm, and 10 μm, respectively. PM concentrations can be obtained by integration over the size distribution.
+
+$(Markdown.MD(
+	Markdown.Admonition("note", "J Exercises", [md"
+1. Compute the surface area, volume, and mass distribution for the missing entries the table, assuming ``\rho_{p}=2000\;kg\;m^{-3}`` 
+2. Compute the total surface area, volume, and mass concentration from the distribution."])))
+
+## Spectral Density
+
+As with number concentration, the surface area and mass distributions are usually written as spectral densities and plotted in logarithmic diameter space. 
+
+```math
+\frac{dS}{dlnD}=\pi D_{p}^{2}\frac{dN}{dlnD}
+```
+
+```math
+\frac{dV}{dlnD}=\frac{\pi}{6}D_{p}^{3}\frac{dN}{dlnD}
+```
+
+```math
+\frac{dM}{dlnD}=\frac{\pi}{6}D_{p}^{3}\frac{dN}{dlnD}\rho_{p}
+```
+
+$(aerosol_figure9())
+**Figure 12.** Representation of the same size distribution as in table 3 plotted as a histogram sampled with 10 bins against spectral density of the number surface area and mass distribution, using a logarithmic x-axis, and with the best fit size-distribution function overlaid. A particle density of 2000 kg m-3 is assumed. The parameters are ``\{ N_{t}=200\;cm^{-3},D_{pg}=80\;nm,\sigma_{g}=1.2\}``.
+
+$(Markdown.MD(
+	Markdown.Admonition("note", "K Exercises", [md"
+1. Is the mode diameter the same for the four different distributions? Why or why not?
+2. Perform unit analysis to show that the units on the y-axes are correct."])))
+"""
+
+# ╔═╡ fd570630-252a-4b45-b574-7fe94d669a3a
+begin
+	challenge = Markdown.MD(
+		Markdown.Admonition("tip", "Synthesis Assignment",  [md"""
 	
+	**The following a multimodal size distribution has been reported in the literature**
+	
+	| Mode 1 | Mode 2 | Mode 3 |
+	|--------|--------|--------|
+	| \{133, 8, 1.93\} | \{66.6, 266, 1.24\} | {3.1, 580, 1.49\} |
+	
+	where the numbers for each mode represent ``\{N_t, D_{pg},\sigma_g\}`` in units ``\{cm^{-3}, nm, -\}``.
+		
+	1. Plot the number, surface area and volume density distributions.
+	2. Numerically estimate the total number, surface area, volume, and mass concentrations in the ultrafine mode (D < 100 nm), accumulation mode (100 nm < D < 1 µm), and total (i.e. all sizes).  
+	"""]));
+	
+	md"""
+
+	# Synthesis Problem
+	$(challenge)
+	Solution:
+	
+	|               | Number (cm⁻³) |  Surface Area (μm² cm⁻³)   |   Mass (μg m⁻³)  |
+	|---------------|---------------|----------------------------|------------------|
+	| Total         | 202.6         | 20.7  | 2.16    |
+	|D < 0.1 μm     | 132.9         | 0.063 | 0.00036 |
+	|0.1 < D < 1 μm | 69.4          | 19.4  | 1.75    |
+	"""
 end
 
 # ╔═╡ 9e6f74f4-c32b-4873-9870-40d0d432c382
@@ -1456,15 +1698,17 @@ version = "17.4.0+2"
 
 # ╔═╡ Cell order:
 # ╟─70924856-fa28-4ca2-b024-95664a461213
-# ╟─4c2859cd-b599-41a5-a5eb-e34c6c35a74f
-# ╠═f1eed054-7d08-4952-b739-d0cfc3b2549a
+# ╠═4c2859cd-b599-41a5-a5eb-e34c6c35a74f
+# ╟─f1eed054-7d08-4952-b739-d0cfc3b2549a
 # ╟─305ec81f-92a0-441b-a223-40b247c4d7eb
 # ╟─6c2236b1-06a4-4cd6-b323-c14dc531db3b
 # ╟─812aae18-616d-4649-883d-caf028ab693b
 # ╟─d6df37c9-d86f-4e73-bcb9-fe776c7c817b
-# ╟─f10b12b0-4bc8-4d04-8848-ce0a7f391b10
-# ╠═6d53b749-00ce-4c63-a140-5a4653b2717a
-# ╠═a928db35-b4d0-486a-9870-0d68464b4e2c
+# ╠═f10b12b0-4bc8-4d04-8848-ce0a7f391b10
+# ╟─a928db35-b4d0-486a-9870-0d68464b4e2c
+# ╟─184b3fb6-6baf-4948-b648-68dcc697a1f1
+# ╟─5b62c4dd-02b0-4621-b40a-2f2a96a5b316
+# ╟─fd570630-252a-4b45-b574-7fe94d669a3a
 # ╟─9e6f74f4-c32b-4873-9870-40d0d432c382
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
