@@ -4,22 +4,28 @@
 The purpose of this lecture is to familiarize the student with the basic definitions, length scales, concentrations scales, sources and types of aerosol, and provide an overview of impacts that aerosols have on the planets and society (visibility, human health, climate, geoengineering, biogeochemical cycling, deposition/acidification). 
 
 \learning{
-*At the end of this lecture, participants will be able*
-- Formally define aerosol
-- Know the range of atmospheric number, size, and mass concentrations
-- List the sources and composition of main atmospheric aerosol types
-- Explain the main impacts of aerosols on society
-- Be aware of the major U.S. agencies involved in researching and regulating aerosols 
+*At the end of this lecture you will have learned will be able to*
+- formally define aerosol
+- specify the range of atmospheric number, size, and mass concentrations of aerosols
+- list the sources and composition of main atmospheric aerosol types
+- explain the main impacts of aerosols on society
+- understand the major U.S. agencies involved in researching and regulating aerosols 
 }
+
+## Video
+
+~~~
+<iframe width="870" height="543" src="https://www.youtube.com/embed/WAjPHHAjlwg" title="AP Aerosol Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br> <br>
+~~~
 
 ## Slides and Lecture Notes
 
 ~~~
-Slides: <a href="" target="_blank"> Slides</a> <br><br>
+Slides deck <a href="https://docs.google.com/presentation/d/1DClho0Bt5WAu5wg3PusDKboTyjevZSs6s0-6KVhzQmc/edit?usp=sharing"> (link) </a> <br><br>
 ~~~
 
 ~~~
-Animation: <a href="https://learn.genetics.utah.edu/content/cells/scale/"> Length Scales</a> <br>
+Animation of length scales <a href="https://learn.genetics.utah.edu/content/cells/scale/"> (link)</a> <br>
 ~~~
 
 ## Reading

@@ -1,37 +1,29 @@
 # Aerosol Size Distribution
-
-Covers symbolic solvers and reviews key concepts in vector calculus with the objective to apply these operators in a computational context.  
-
+The purpose of this lecture is to introduce the mathematical description of the aerosol size distribution as well as measurement methods thereof.
 
 \learning{
 *At the end of this lecture, participants will be able to*
-- Interpret aerosol size distributions graphed in various domains 
-- Apply the lognormal aerosol size distribution function to represent aerosol size distributions
-- Describe the principle of operation for scanning mobility particle sizers and optical particle counters
-- Name the dominant modes of the atmospheric size distribution 
-- Know particle sources and processes associated with each mode
-- Analyze ambient size distribution data and fit multimodal lognormal parameters
+- interpret aerosol size distributions graphed in various domains 
+- apply the lognormal aerosol size distribution function to represent aerosol size distributions
+- explain the basic principle of operation for mobility-based and optical-based measurements
+- categorize the atmospheric size distribution into modes 
+- know particle sources and processes associated with each mode
+- numerically analyze lognormal size distributions 
 }
 
 ## Slides and Lecture Notes
 
 ~~~
-Notes: <a href=""> </a>
+Slide deck <a href="https://docs.google.com/presentation/d/17y7T163nqIGeAFZDbBIo4pL4hLMYcyf2tjVWJWxF3sY/edit?usp=sharing"> (link) </a> <br> <br>
 ~~~
 
 ~~~
-Notes: <a href=""> </a>
-~~~
-
-## Notebooks
-
-~~~
-Notebook 1: <a href="">  </a> <br> <br>
+Lecture notebook <a href="https://mdpetters.github.io/cee233/notebooks/particle_size_statistics/"> (link) </a> <br> <br>
 ~~~
 
 
 ## Homework
 
 \exercise{
-Due Oct 23, 2023: []() 
+Due April 18: Lecture notebook including synthesis assignment. 
 }
