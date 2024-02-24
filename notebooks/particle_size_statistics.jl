@@ -24,6 +24,9 @@ begin
 	using DataFrames
 	using Colors
 	using Printf
+	using CSV
+	using DataFrames
+	using HTTP
 	using Logging
 
 	Logging.disable_logging(Logging.Warn)
@@ -33,7 +36,7 @@ begin
 	pops2_url = "https://mdpetters.github.io/cee233/assets/pops.png"
 	
     smps1_url = "https://mdpetters.github.io/cee233/assets/smps_schematic.png"
-	smps2_url = "https://mdpetters.github.io/cee233/assets/figures/smps.jpg"
+	smps2_url = "https://mdpetters.github.io/cee233/assets/smps.jpg"
 
 	hfdma_url = "https://mdpetters.github.io/cee233/assets/hfdma.csv"
 	lhfdma_url = "https://mdpetters.github.io/cee233/assets/hfdma.csv"
@@ -55,6 +58,18 @@ begin
 	Markdown.Admonition("warning", "Definition if an Aerosol", [md"An aerosol is a collection of airborne solid or liquid particles, with a typical size between 10 and 1000 nm. Aerosols may be of either natural or anthropogenic origin. "])))
 	"""
 end
+
+# ╔═╡ 4c2859cd-b599-41a5-a5eb-e34c6c35a74f
+md"""
+$(Resource(la_url, :width => 2500px))
+**Figure 1.** Smog over Los Angeles. Photo by David Iliff. License: CC BY-SA 3.0.
+
+Aerosols have acute and chronic negative impacts on human health and the environment. Aerosols scatter (redirect) light, which reduces visibility. The particles serve as condensation sites for water, thereby influencing the properties of clouds. 
+
+Particle number concentration and particle size are the most critical properties determining how aerosol interacts with the body, the atmosphere, and light. These two properties are described by the particle size distribution. In addition to help assessing aerosol impacts, particle size distributions also provide information about the sources and age of particles.
+
+## Tabular Represenation
+"""
 
 # ╔═╡ f1eed054-7d08-4952-b739-d0cfc3b2549a
 begin
@@ -270,29 +285,6 @@ begin
 	aerosol_table1()
 end
 
-# ╔═╡ 4c2859cd-b599-41a5-a5eb-e34c6c35a74f
-md"""
-$(Resource(la_url, :width => 2500px))
-**Figure 1.** Smog over Los Angeles. Photo by David Iliff. License: CC BY-SA 3.0.
-
-Aerosols have acute and chronic negative impacts on human health and the environment. Aerosols scatter (redirect) light, which reduces visibility. The particles serve as condensation sites for water, thereby influencing the properties of clouds. 
-
-Particle number concentration and particle size are the most critical properties determining how aerosol interacts with the body, the atmosphere, and light. These two properties are described by the particle size distribution. In addition to help assessing aerosol impacts, particle size distributions also provide information about the sources and age of particles.
-
-## Tabular Representation of the Size Distribution
-
-A size distribution measurement counts the number of particles within a size interval ``D_{low}`` to ``D_{up}`` over some period time and some of air. From this the number concentration of particles ``N\;(\#\;cm^{-3})`` is obtained. The most basic representation of the size distribution is in the form of a table: 
-
-
-$(aerosol_figure1()) 
-**Figure 2.** The same size distribution as in the table plotted as a histogram.
-
-$(Markdown.Admonition("note", "A Exercises", [md"
-1. Calculate the total particle number concentration from the table above.
-2. Is the bin-width constant in the table and figure?
-3. Identify strength and weaknesses of this representation of the size distribution."]))
-"""
-
 # ╔═╡ 305ec81f-92a0-441b-a223-40b247c4d7eb
 md"""
   $(aerosol_figure1()) 
@@ -343,7 +335,7 @@ $(Markdown.Admonition("note", "E Exercises", [md"
 Are the bins spaced regularly when plotting in log-space? If so, why?
 "]))
 
-## Lognormal Size Distribution Function
+## Lognormal Function
 
 Note that the size distribution appears like bell-shaped curve when plotted in logarithmic-diameter space. Such distributions are represented using the lognormal size distribution function
 
@@ -444,46 +436,36 @@ md"""
 
 Many techniques to measure size distributions exist. Two common instrument are the Scanning Mobility Particle Sizer (SMPS) and the Optical Particle Counter (OPC) and are introduced here.
 
-## Scanning Mobility Particle Sizer (SMPS)
+## Scanning Mobility Particle Sizer
 
 Aerosol flows through an annulus gap. An electric potential is applied between the inner and outer column. The electric potential drags charged particles through a sheath flow. Charged particles within a narrow electrical mobility band are steered to a sample slit. The electric potential selects a narrow size range. Particles within this size range are counted using a condensation particle counter. Scanning the electric potential with time, usually over a 1-5 min period produces a particle size distribution. 
 
 The SMPS technique can used to measure particles between 1-1000 nm. However, a single instrument us limited to a narrower range which is determined by the length of the column and the flow rate through the instrument.
 
-$(Resource(pops_url, :width => 2500px))
-<table> <tr>
-  <td> <img src="figures/smps_schematic.png" alt="Drawing" style="width: 395px;"/> </td>
-  <td> <img src="figures/smps.jpg" alt="Drawing" style="width: 300px;"/> </td>
-</tr></table>
-pops.png
-**Figure 8.** (Left) Schematic of the SMPS. <i> Image Source:</i> Petters (2018), License CC BY-NC-ND 4.0. (Right) Commercial SMPS instrument. <i> Image Source: </i> manufacturer brochure.
+|                     |                      |
+|---------------------|----------------------|
+| $(Resource(smps1_url, :width => 1400px)) | $(Resource(smps2_url, :width => 1100px))|
+**Figure 8.** (Left) Schematic of the SMPS. *Image Source:* Petters (2018), License CC BY-NC-ND 4.0. (Right) Commercial SMPS instrument. *Image Source:* manufacturer brochure.
   
-## Optical Particle Counter (OPC)
+## Optical Particle Spectrometer
 
 Aerosol flow is directed through a laser beam. Particles scatter (redirect) light in the beam to photodetector. The intensity of the scattered light is related to the particle size. Concentration is obtained from the number of particles crossing the laser beam per unit time and the flow rate through the instrument. Particles are binned into size bins based on scattered light intensity. 
 
 The OPC technique can be used to measure particles > 60 nm. However, most OPCs only detect particles > 400 nm. At large sizes concentrations become small and detection is limited by counting statistics. Thus the size range depends on the specific OPC model. The POPS particles 150 nm - 3000 nm. 
 
-<table> <tr>
-  <td> <img src="figures/pops_schematic.png" alt="Drawing" style="width: 500px;"/> </td>
-  <td> <img src="figures/pops.png" alt="Drawing" style="width: 300px;"/> </td>
-</tr></table>
+|                     |                      |
+|---------------------|----------------------|
+| $(Resource(pops1_url, :width => 1400px)) | $(Resource(pops2_url, :width => 900px)) |
 
-**Figure 9.** (Left) Top and side view of an optical particle counter. The collimating lens (CL) is shown in green, the cylindrical lenses (CyLs) are shown in blue,the diode laser, DL, is in solid dark blue. (Right) A complete and functional instrument. Bottom panel: The optics box with the scattering signal digitizer board (shielded by a grounded brass EMI cover). <i> Image Source </i> Gao et al. (2018), License: Non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly attributed, cited, and is not altered, transformed, or built upon in any way, is permitted. 
+
+**Figure 9.** (Left) Top and side view of an optical particle counter. The collimating lens (CL) is shown in green, the cylindrical lenses (CyLs) are shown in blue,the diode laser, DL, is in solid dark blue. (Right) A complete and functional instrument. Bottom panel: The optics box with the scattering signal digitizer board (shielded by a grounded brass EMI cover). *Image Source:* Gao et al. (2018), License: Non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly attributed, cited, and is not altered, transformed, or built upon in any way, is permitted. 
 
 # Ambient Size Distributions
 """
 
-# ╔═╡ f02e30c5-7da5-40a7-8e8e-eb67576757e3
-md"""
-$(Resource(pops1_url, :width => 2500px))
-<table> <tr>
-  <td> <img src="figures/smps_schematic.png" alt="Drawing" style="width: 395px;"/> </td>
-  <td> <img src="figures/smps.jpg" alt="Drawing" style="width: 300px;"/> </td>
-</tr></table>
-pops.png
-**Figure 8.** (Left) Schematic of the SMPS. <i> Image Source:</i> Petters (2018), License CC BY-NC-ND 4.0. (Right) Commercial SMPS instrument. <i> Image Source: </i> manufacturer brochure.
-"""
+# ╔═╡ 6d53b749-00ce-4c63-a140-5a4653b2717a
+	sunspot_data = CSV.read(HTTP.get(hfdma_url).body, DataFrame)
+
 
 # ╔═╡ a928db35-b4d0-486a-9870-0d68464b4e2c
 begin
@@ -566,9 +548,11 @@ Images and software from other sources are licensed as indicated.
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 Colors = "5ae59095-9a9b-59fe-a467-6f913c188581"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Gadfly = "c91e804a-d5a3-530f-b6f0-dfbca275c004"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
@@ -576,9 +560,11 @@ PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [compat]
+CSV = "~0.10.12"
 Colors = "~0.12.10"
 DataFrames = "~1.6.1"
 Gadfly = "~1.4.0"
+HTTP = "~1.10.2"
 LaTeXStrings = "~1.3.1"
 PlutoUI = "~0.7.58"
 """
@@ -589,7 +575,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.10.1"
 manifest_format = "2.0"
-project_hash = "7f63d76c5e21a2547fcdc37426a45a3cc6ac212b"
+project_hash = "e11d353f2896d87b91319aff25b19ea4cc447b38"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -634,6 +620,17 @@ version = "1.1.0"
 [[deps.Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
+[[deps.BitFlags]]
+git-tree-sha1 = "2dc09997850d68179b69dafb58ae806167a32b1b"
+uuid = "d1d4a3ce-64b1-5f1a-9ba4-7e7e69966f35"
+version = "0.1.8"
+
+[[deps.CSV]]
+deps = ["CodecZlib", "Dates", "FilePathsBase", "InlineStrings", "Mmap", "Parsers", "PooledArrays", "PrecompileTools", "SentinelArrays", "Tables", "Unicode", "WeakRefStrings", "WorkerUtilities"]
+git-tree-sha1 = "679e69c611fff422038e9e21e270c4197d49d918"
+uuid = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+version = "0.10.12"
+
 [[deps.Calculus]]
 deps = ["LinearAlgebra"]
 git-tree-sha1 = "f641eb0a4f00c343bbc32346e1217b86f3ce9dad"
@@ -668,6 +665,12 @@ weakdeps = ["SparseArrays"]
     [deps.ChainRulesCore.extensions]
     ChainRulesCoreSparseArraysExt = "SparseArrays"
 
+[[deps.CodecZlib]]
+deps = ["TranscodingStreams", "Zlib_jll"]
+git-tree-sha1 = "59939d8a997469ee05c4b4944560a820f9ba0d73"
+uuid = "944b1d66-785c-5afd-91f1-9de20f533193"
+version = "0.7.4"
+
 [[deps.ColorTypes]]
 deps = ["FixedPointNumbers", "Random"]
 git-tree-sha1 = "eb7f0f8307f71fac7c606984ea5fb2817275d6e4"
@@ -700,6 +703,12 @@ deps = ["Base64", "Colors", "DataStructures", "Dates", "IterTools", "JSON", "Lin
 git-tree-sha1 = "bf6570a34c850f99407b494757f5d7ad233a7257"
 uuid = "a81c6b42-2e10-5240-aca2-a61377ecd94b"
 version = "0.9.5"
+
+[[deps.ConcurrentUtilities]]
+deps = ["Serialization", "Sockets"]
+git-tree-sha1 = "9c4708e3ed2b799e6124b5673a712dda0b596a9b"
+uuid = "f0e56b4a-5159-44fe-b623-3e5288b988bb"
+version = "2.3.1"
 
 [[deps.Contour]]
 git-tree-sha1 = "d05d9e7b7aedff4e5b51a029dced05cfb6125781"
@@ -791,6 +800,12 @@ git-tree-sha1 = "5837a837389fccf076445fce071c8ddaea35a566"
 uuid = "fa6b7ba4-c1ee-5f82-b5fc-ecf0adba8f74"
 version = "0.6.8"
 
+[[deps.ExceptionUnwrapping]]
+deps = ["Test"]
+git-tree-sha1 = "dcb08a0d93ec0b1cdc4af184b26b591e9695423a"
+uuid = "460bff9d-24e4-43bc-9d9f-a8973cb893f4"
+version = "0.1.10"
+
 [[deps.FFTW]]
 deps = ["AbstractFFTs", "FFTW_jll", "LinearAlgebra", "MKL_jll", "Preferences", "Reexport"]
 git-tree-sha1 = "4820348781ae578893311153d69049a93d05f39d"
@@ -802,6 +817,12 @@ deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
 git-tree-sha1 = "c6033cc3892d0ef5bb9cd29b7f2f0331ea5184ea"
 uuid = "f5851436-0d7a-5f13-b9de-f02708fd171a"
 version = "3.3.10+0"
+
+[[deps.FilePathsBase]]
+deps = ["Compat", "Dates", "Mmap", "Printf", "Test", "UUIDs"]
+git-tree-sha1 = "9f00e42f8d99fdde64d40c8ea5d14269a2e2c1aa"
+uuid = "48062228-2e41-5def-b9a4-89aafe57970f"
+version = "0.9.21"
 
 [[deps.FileWatching]]
 uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
@@ -838,6 +859,12 @@ version = "1.4.0"
 git-tree-sha1 = "53bb909d1151e57e2484c3d1b53e19552b887fb2"
 uuid = "42e2da0e-8278-4e71-bc24-59509adca0fe"
 version = "1.0.2"
+
+[[deps.HTTP]]
+deps = ["Base64", "CodecZlib", "ConcurrentUtilities", "Dates", "ExceptionUnwrapping", "Logging", "LoggingExtras", "MbedTLS", "NetworkOptions", "OpenSSL", "Random", "SimpleBufferStream", "Sockets", "URIs", "UUIDs"]
+git-tree-sha1 = "ac7b73d562b8f4287c3b67b4c66a5395a19c1ae8"
+uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+version = "1.10.2"
 
 [[deps.Hexagons]]
 deps = ["Test"]
@@ -1011,6 +1038,12 @@ version = "0.3.27"
 [[deps.Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
+[[deps.LoggingExtras]]
+deps = ["Dates", "Logging"]
+git-tree-sha1 = "c1dd6d7978c12545b4179fb6153b9250c96b0075"
+uuid = "e6f89c97-d47a-5376-807f-9c37f3926c36"
+version = "1.0.3"
+
 [[deps.MIMEs]]
 git-tree-sha1 = "65f28ad4b594aebe22157d6fac869786a255b7eb"
 uuid = "6c6e2e6c-3030-632d-7369-2d6c69616d65"
@@ -1031,6 +1064,12 @@ version = "0.5.13"
 [[deps.Markdown]]
 deps = ["Base64"]
 uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
+
+[[deps.MbedTLS]]
+deps = ["Dates", "MbedTLS_jll", "MozillaCACerts_jll", "NetworkOptions", "Random", "Sockets"]
+git-tree-sha1 = "c067a280ddc25f196b5e7df3877c6b226d390aaf"
+uuid = "739be429-bea8-5141-9913-cc70e7f3736d"
+version = "1.1.9"
 
 [[deps.MbedTLS_jll]]
 deps = ["Artifacts", "Libdl"]
@@ -1089,6 +1128,18 @@ version = "0.3.23+4"
 deps = ["Artifacts", "Libdl"]
 uuid = "05823500-19ac-5b8b-9628-191a04bc5112"
 version = "0.8.1+2"
+
+[[deps.OpenSSL]]
+deps = ["BitFlags", "Dates", "MozillaCACerts_jll", "OpenSSL_jll", "Sockets"]
+git-tree-sha1 = "51901a49222b09e3743c65b8847687ae5fc78eb2"
+uuid = "4d8831e6-92b7-49fb-bdf8-b643e874388c"
+version = "1.4.1"
+
+[[deps.OpenSSL_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl"]
+git-tree-sha1 = "60e3045590bd104a16fefb12836c00c0ef8c7f8c"
+uuid = "458c3c95-2e84-50aa-8efc-19380b2a3a95"
+version = "3.0.13+0"
 
 [[deps.OpenSpecFun_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "Pkg"]
@@ -1226,6 +1277,11 @@ git-tree-sha1 = "91eddf657aca81df9ae6ceb20b959ae5653ad1de"
 uuid = "992d4aef-0814-514b-bc4d-f2e9a6c4116f"
 version = "1.0.3"
 
+[[deps.SimpleBufferStream]]
+git-tree-sha1 = "874e8867b33a00e784c8a7e4b60afe9e037b74e1"
+uuid = "777ac1f9-54b0-4bf8-805c-2214025038e7"
+version = "1.1.0"
+
 [[deps.Sockets]]
 uuid = "6462fe0b-24de-5631-8697-dd941f90decc"
 
@@ -1338,6 +1394,15 @@ version = "1.10.0"
 deps = ["InteractiveUtils", "Logging", "Random", "Serialization"]
 uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
+[[deps.TranscodingStreams]]
+git-tree-sha1 = "54194d92959d8ebaa8e26227dbe3cdefcdcd594f"
+uuid = "3bb67fe8-82b1-5028-8e26-92a6c54297fa"
+version = "0.10.3"
+weakdeps = ["Random", "Test"]
+
+    [deps.TranscodingStreams.extensions]
+    TestExt = ["Test", "Random"]
+
 [[deps.Tricks]]
 git-tree-sha1 = "eae1bb484cd63b36999ee58be2de6c178105112f"
 uuid = "410a4b4d-49e4-4fbc-ab6d-cb71b17b3775"
@@ -1355,11 +1420,22 @@ uuid = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 [[deps.Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
+[[deps.WeakRefStrings]]
+deps = ["DataAPI", "InlineStrings", "Parsers"]
+git-tree-sha1 = "b1be2855ed9ed8eac54e5caff2afcdb442d52c23"
+uuid = "ea10d353-3f73-51f8-a26c-33c1cb351aa5"
+version = "1.4.2"
+
 [[deps.WoodburyMatrices]]
 deps = ["LinearAlgebra", "SparseArrays"]
 git-tree-sha1 = "c1a7aa6219628fcd757dede0ca95e245c5cd9511"
 uuid = "efce3f68-66dc-5838-9240-27a6d6f5f9b6"
 version = "1.0.0"
+
+[[deps.WorkerUtilities]]
+git-tree-sha1 = "cd1659ba0d57b71a464a29e64dbc67cfe83d54e7"
+uuid = "76eceee3-57b5-4d4a-8e66-0e911cebbf60"
+version = "1.6.1"
 
 [[deps.Zlib_jll]]
 deps = ["Libdl"]
@@ -1383,15 +1459,15 @@ version = "17.4.0+2"
 """
 
 # ╔═╡ Cell order:
-# ╠═70924856-fa28-4ca2-b024-95664a461213
-# ╠═4c2859cd-b599-41a5-a5eb-e34c6c35a74f
-# ╟─f1eed054-7d08-4952-b739-d0cfc3b2549a
+# ╟─70924856-fa28-4ca2-b024-95664a461213
+# ╟─4c2859cd-b599-41a5-a5eb-e34c6c35a74f
+# ╠═f1eed054-7d08-4952-b739-d0cfc3b2549a
 # ╟─305ec81f-92a0-441b-a223-40b247c4d7eb
 # ╟─6c2236b1-06a4-4cd6-b323-c14dc531db3b
 # ╟─812aae18-616d-4649-883d-caf028ab693b
 # ╟─d6df37c9-d86f-4e73-bcb9-fe776c7c817b
-# ╠═f10b12b0-4bc8-4d04-8848-ce0a7f391b10
-# ╠═f02e30c5-7da5-40a7-8e8e-eb67576757e3
+# ╟─f10b12b0-4bc8-4d04-8848-ce0a7f391b10
+# ╠═6d53b749-00ce-4c63-a140-5a4653b2717a
 # ╠═a928db35-b4d0-486a-9870-0d68464b4e2c
 # ╟─9e6f74f4-c32b-4873-9870-40d0d432c382
 # ╟─00000000-0000-0000-0000-000000000001
