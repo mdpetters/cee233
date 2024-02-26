@@ -1,30 +1,25 @@
-# Regularization
+# Kinetic Theory
 
-Covers matrix based ordinary least squares regression, discretization of Fredholm and Voltarra integral equations, and matrix-based regularization approaches to solve ill-posed problems. 
+Reviews the behavior of gases based on statistical mechanics. The main concepts covered are Maxwell-Boltzmann distribution of velocities, mean free path of air, effusion and diffusion, inertial forces and viscosity, Reynolds number, laminar and turbulent flow.
 
 \learning{
-**By the end of this module you have learned**
-- how to apply matrix based ordinary regression to find multi-linear regression parameters to fit data.
-- how to discretize integral equations to cast them into matrix form.
-- how to analyze matrices to determine the degree to which problems are ill posed.
-- how to apply regularization to invert ill-posed matrix equations.
-- how to apply common approaches to identify the optimal regularization parameter. 
+**By the end of this lecture you have learned**
+- the basic tenets of the kinetic theory of ideal gases
+- how to apply kinetic theory to predict properties of gases
+- how kinetic theory relates to the behavior of particles suspended in a gas
 }
 
 ## Slides and Lecture Notes
 
 ~~~
-Notes: <a href="https://drive.google.com/file/d/1pE-f5JEwXMYOx7adz2A-SrONOdS5uuLJ/view?usp=sharing" target="_blank"> Notes</a>
+Slide Deck: <a href="https://docs.google.com/presentation/d/11p5s5FCknfCHMUxnZr-gu8v-N3qR5EPM7Q86vEAWoW0/edit?usp=sharing"> Notes</a>
 ~~~
 
-## Notebooks
-
-~~~
-Notebook: <a href="https://mdpetters.github.io/cee200/notebooks/regression/" target="_blank"> Regression, Inversion, and Regularization</a>
-~~~
+## Reading
+Hinds, Chapter 2
 
 ## Homework
 
 \exercise{
-Due Nov 6, 2023: [https://classroom.github.com/a/GX478nuP](https://classroom.github.com/a/GX478nuP) 
+Due April 16 2024: [Homework 3](https://docs.google.com/document/d/1H48niLzcan2gSxnBiEHxFT723OuABeouts_YG17j04g/edit?usp=sharing) 
 }

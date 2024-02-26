@@ -1,36 +1,23 @@
+# Uniform Particle Motion
 
-# Fourier Transforms
 
-This session teaches you how to apply the discrete Fourier transform to perform spectral analysis and filtering on data sets. The topic is generalized to introduce the continuous Fourier and Laplace transform.  
-
-\learning{
-**By the end of this module you have**
-- learned how to apply the discrete Fourier transform to compute the amplitude and phase spectrum
-- learned how to apply the discrete Fourier transform to compute the power spectrum
-- learned how to filter data in the spectral domain
-- reviewed important properties of the continuous and Fourier and Laplace transform  
-}
+The purpose of this lecture is to introduce the basic mechanical properties of aerosol, covering the concepts of particle mobility, particle shape factor, aerodynamic diameter, (Stokes) drag and terminal velocity. 
 
 ## Slides and Lecture Notes
 
 ~~~
-Slides: <a href="https://docs.google.com/presentation/d/1tgb63vTVY6S9e0WIXNf5MfuL_AzIdu0sKpb-fQruZPk/edit?usp=sharing" target="_blank"> Fourier Transform</a> <br><br>
+Slide Deck: <a href="https://mdpetters.github.io/cee233/notebooks/particle_size_statistics/"> (link)</a> <br><br>
 ~~~
 
 ~~~
-Notes: <a href="https://drive.google.com/file/d/10FDL03vgqHy_gPjufjJxbAgG8gp-HZSK/view?usp=sharing" target="_blank"> Oct 5, 2023</a>
+Lecture Notebook: <a href="https://mdpetters.github.io/cee233/notebooks/terminal_velocity/"> Terminal Velocity</a>
 ~~~
 
-
-## Notebooks
-
-~~~
-Notebook: <a href="https://mdpetters.github.io/cee200/notebooks/dft/" target="_blank"> Fourier Transform</a>
-~~~
-
+# Reading 
+Reading: Hinds Chapter, 3.
 
 ## Homework
 
 \exercise{
-Due Oct 16, 2023: [https://classroom.github.com/a/UiQ-CDc1](https://classroom.github.com/a/UiQ-CDc1) 
+Due April, 24 2024: Lecture notebook including synthesis assignment.
 }

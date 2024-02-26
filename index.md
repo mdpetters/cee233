@@ -33,13 +33,13 @@ Reading: <a href="https://www.wiley.com/en-us/Aerosol+Technology:+Properties,+Be
 
 \outcomes{
 *At the end of the term, participants will be able*
-1. Know the characteristics, sources, and global distributions of different aerosol types. 
-2. Apply formalisms to describe the aerosol size distribution.
-3. Apply formalisms to describe the response of particles to external force fields and radiation.
-3. Explain the principles of aerosol measurements for common aerosol measurements.
-5. Explain the processes that contribute to the atmospheric burden of carbonaceous aerosols.
-7. Explain and apply theoretical models to describe aerosol processes including nucleation, evaporation/condensation, equilibrium water uptake, and equilibrium gas-particle partitioning.
-8. Design field measurements to evaluate emissions in the context of local meteorology.  
+1. describe the characteristics, sources, and global distributions of different aerosol types 
+2. apply formalisms to quantify the aerosol size distribution
+3. apply formalisms to calculate the response of particles to external force fields and radiation
+3. describe the principles of aerosol measurements for common aerosol measurements
+5. explain the processes that contribute to the atmospheric burden of carbonaceous aerosols
+7. explain and apply theoretical models to describe aerosol processes including nucleation, evaporation/condensation, equilibrium water uptake, and equilibrium gas-particle partitioning
+8. design field measurements to evaluate emissions in the context of local meteorology
 }
 
 #### Assessment
