@@ -3,13 +3,13 @@
 
 <url>
     <loc>https://mdpetters.github.io/cee233/session2/index.html</loc>
-    <lastmod>2024-02-24</lastmod>
+    <lastmod>2024-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/session3/index.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2024-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -21,7 +21,7 @@
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/session4/index.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2024-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -39,7 +39,7 @@
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/index.html</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -58,6 +58,12 @@
 <url>
     <loc>https://mdpetters.github.io/cee233/notebooks/particle_size_statistics/</loc>
     <lastmod>2024-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://mdpetters.github.io/cee233/notebooks/terminal_velocity/</loc>
+    <lastmod>2024-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
