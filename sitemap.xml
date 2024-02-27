@@ -62,6 +62,12 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>https://mdpetters.github.io/cee233/notebooks/webapp/</loc>
+    <lastmod>2024-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://mdpetters.github.io/cee233/notebooks/terminal_velocity/</loc>
     <lastmod>2024-02-26</lastmod>
     <changefreq>monthly</changefreq>
