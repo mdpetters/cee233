@@ -6,14 +6,14 @@ The purpose of this lecture is to introduce the basic mechanical properties of a
 ## Slides and Lecture Notes
 
 ~~~
-Slide Deck: <a href="https://mdpetters.github.io/cee233/notebooks/particle_size_statistics/"> (link)</a> <br><br>
+Slide Deck: <a href="https://docs.google.com/presentation/d/1hrCZVrK583cRGPbvUckbE_U0omod5GGjt2slIadlJVg/edit?usp=sharing"> (link)</a> <br><br>
 ~~~
 
 ~~~
 Lecture Notebook: <a href="https://mdpetters.github.io/cee233/notebooks/terminal_velocity/"> Terminal Velocity</a>
 ~~~
 
-# Reading 
+## Reading 
 Reading: Hinds Chapter, 3.
 
 ## Homework

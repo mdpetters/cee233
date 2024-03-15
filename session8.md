@@ -1,20 +1,13 @@
-# Introduction to Computational Fluid Dynamics
+# Optical properties
 
-Introduces the Navier-Stokes equations and basic concepts of how computational fluid dynamics (CFD) solvers can be used to solve fluid-flow problems. 
-
-\learning{
-**By the end of this module you have learned**
-- how to apply initial conditions and boundary conditions to domains
-- how to apply a mesh to the domain
-- how to run a CFD simulation using OpenFOAM 
-- how to visualize solutions
-}
+Covers scattering, absorption extinction, scattering phase function, single scatter albedo, asymmetry parameter,  and the application of these concepts in aerosol measurement: optical particle counter, nephelometer, remote sensing.
 
 ## Slides and Lecture Notes
 
-~~~
-Notes: <a href="" target="_blank"> Notes</a>
-~~~
+Slide Deck: [link](https://docs.google.com/presentation/d/11xf6lEfZa_FjVRBDgKhFP_lS3ilHSuClwSdeRjNWY-E/edit?usp=sharing)
+
+## Reading 
+Reading: Hinds Chapter 16.
 
 ## Homework
 
