@@ -2,25 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>https://mdpetters.github.io/cee233/session2/index.html</loc>
-    <lastmod>2024-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://mdpetters.github.io/cee233/session3/index.html</loc>
-    <lastmod>2024-02-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://mdpetters.github.io/cee233/session5/index.html</loc>
+    <loc>https://mdpetters.github.io/cee233/session4/index.html</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://mdpetters.github.io/cee233/session4/index.html</loc>
+    <loc>https://mdpetters.github.io/cee233/session7/index.html</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://mdpetters.github.io/cee233/session5/index.html</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -38,20 +32,32 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://mdpetters.github.io/cee233/index.html</loc>
-    <lastmod>2024-04-01</lastmod>
+    <loc>https://mdpetters.github.io/cee233/session2/index.html</loc>
+    <lastmod>2024-02-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://mdpetters.github.io/cee233/session7/index.html</loc>
-    <lastmod>2024-03-15</lastmod>
+    <loc>https://mdpetters.github.io/cee233/session3/index.html</loc>
+    <lastmod>2024-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://mdpetters.github.io/cee233/session9/index.html</loc>
+    <lastmod>2024-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/session8/index.html</loc>
     <lastmod>2024-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://mdpetters.github.io/cee233/index.html</loc>
+    <lastmod>2024-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
