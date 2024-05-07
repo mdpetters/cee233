@@ -5,7 +5,7 @@ Covers Brownian motion, particle diffusion, Stokes-Einstein equation, and thermo
 ## Slides and Lecture Notes
 
 
-Slide Deck: [link](https://docs.google.com/presentation/d/1TrGxm3thj1_sh1YpoX64k4zJ3e55cfxLLnm2YIJKVh8/edit?usp=sharing)
+Slide Deck: [link](https://docs.google.com/presentation/d/13tv51ftjTgRbGV_8tNz_xeWkkgUXLOnRGfxf2EoCczk/edit?usp=sharing)
 
 Animation: [Brownian motion](http://galileoandeinstein.physics.virginia.edu/more_stuff/Applets/Brownian/brownian.html)
 

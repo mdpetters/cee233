@@ -15,7 +15,7 @@ The purpose of this lecture is to familiarize the student with the basic definit
 ## Video
 
 ~~~
-<iframe width="870" height="543" src="https://www.youtube.com/embed/WAjPHHAjlwg" title="AP Aerosol Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br> <br>
+<iframe width="870" height="480" src="https://www.youtube.com/embed/WAjPHHAjlwg" title="AP Aerosol Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br> <br>
 ~~~
 
 ## Slides and Lecture Notes

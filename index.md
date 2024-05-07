@@ -113,7 +113,7 @@ Late homework will receive no credit. An extension may be granted if the student
 - Discussion Sessions: Discussion sessions are used for one-on-one instruction 
 
 #### Term Project
-You are tasked to design a field campaign to validate aerosol emissions at urban scale. You can pick the location (metropolitan area), emission type (e.g. mobile vs. stationary), aerosol type (black carbon vs. secondary organic aerosol vs. inorganic sources). The main objective is to design a measurement campaign that is (1) feasible, (2) affordable, and (3) compelling. Feasible means that it is logistically possible to conduct the measurements. Examples of feasibility include site access, instrument availability, and personnel availability. Affordable means that you are limited in the number of high instruments you can deploy. An example of "non-affordable" would be a campaign that requires a fleet of specialized aircraft. Compelling means that the data will provide meaningful constraints on the emissions given the limitations of your sensors and the geographical area. Examples of "not compelling" would be insufficient sensitivity of the selected sensor(s), insufficient temporal or spatial coverage, or interference by factors outside of your control, including meteorological factors. 
+You are tasked to design a field campaign to validate aerosol emissions at urban scale. You can pick the location (metropolitan area), emission type (e.g. mobile vs. stationary), aerosol type (black carbon vs. secondary organic aerosol vs. inorganic sources). The main objective is to design a measurement campaign that is (1) feasible, (2) affordable, and (3) compelling. Feasible means that it is logistically possible to conduct the measurements. Examples of feasibility include site access, instrument availability, and personnel availability. Affordable means that you are limited in the number of high quality instruments you can deploy. An example of "non-affordable" would be a campaign that requires a fleet of specialized aircraft. Compelling means that the data will provide meaningful constraints on the emissions given the limitations of your sensors and the geographical area. Examples of "not compelling" would be insufficient sensitivity of the selected sensor(s), insufficient temporal or spatial coverage, or interference by factors outside of your control, including meteorological factors. 
     
 Evaluation will focus on the following aspects
 - Problem statement (description of the emission problem)
@@ -185,20 +185,17 @@ The use of laptop computers or tablet to follow the notebooks during lectures is
 | Apr 9  | Aerosol Size Distribution  | Apr 11 | Kinetic Theory               |
 | Apr 16 | Uniform Particle Motion    | Apr 18 | Curvilinear Particle Motion  |
 | Apr 23 | Brownian Motion            | Apr 25 | Electrical Properties        | 
-| Apr 30 | Optical Properties         | May 2  | Evaporation and Condensation | 
-| May 7  | Coagulation                | May 9  | Aerosol Climatology          | 
-| May 14 | **Midterm**                | May 16 | Carbonaceous Aerosol         | 
-| May 21 | Gas-Particle Partitioning  | May 23 | Nucleation                   | 
-| May 28 | Aerosol-Water Interactions | May 30 | Air Pollution Meteorology    | 
-| Jun 4  | Backup Slot                | Jun 6  | Presentations                |
+| Apr 30 | Electrical Properties      | May 2  | Optical Properties           | 
+| May 7  | Optical Properties         | May 9  | Aerosol Climatology          | 
+| May 14 | **Midterm**                | May 16 | Aerosol Climatology          | 
+| May 21 | Aerosol Climatology        | May 23 | Evaporation and Condensation | 
+| May 28 | Evaporation and Condensation | May 30 | Carbonaceous Aerosol   | 
+| Jun 4  | Carbonaceous Aerosol       | Jun 6  | Presentations                |
 
 \note{
 **Final exam: Monday, June 10, 8:00 AM - 11:00 AM**
 }
 
-#### Survey
-Please fill out the survey to provide initial feedback on the course. 
-
 ~~~
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScpICUDyQmRoahfC_ZQcl2aONhNhjtIcoMxZG1YZLhTqqlE3w/viewform?embedded=true" width="600" height="1599" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebR7AKWxOwHKlrREuy7GJFdFncFxWxWU9ww9LUBoiLfEKkbA/viewform?embedded=true" width="900" height="1300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 ~~~
