@@ -3,13 +3,19 @@
 
 <url>
     <loc>https://mdpetters.github.io/cee233/session10/index.html</loc>
-    <lastmod>2024-05-27</lastmod>
+    <lastmod>2024-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://mdpetters.github.io/cee233/session11/index.html</loc>
+    <lastmod>2024-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/session4/index.html</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2024-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -21,7 +27,7 @@
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/session5/index.html</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2024-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
@@ -39,13 +45,13 @@
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/session2/index.html</loc>
-    <lastmod>2024-05-27</lastmod>
+    <lastmod>2024-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://mdpetters.github.io/cee233/session3/index.html</loc>
-    <lastmod>2024-02-26</lastmod>
+    <lastmod>2024-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
