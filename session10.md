@@ -7,7 +7,7 @@ Derivation of the Kelvin equation, homogeneous nucleation, kinetics of mass tran
 Slide Deck: [link](https://docs.google.com/presentation/d/1vumWRy-iN-dU4rLb-8pbWGwZScriXfb7shMwyWYxHxw/edit?usp=sharing)
 
 ~~~
-Lecture Notebook <a href="https://mdpetters.github.io/cee233/notebooks/virtualtdma.html/"> (link) </a> <br> <br>
+Lecture Notebook: <a href="https://mdpetters.github.io/cee233/notebooks/virtualtdma/"> Virtual Volatility Tandem DMA </a> <br> <br>
 ~~~
 
 ## Reading 

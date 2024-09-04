@@ -5,7 +5,7 @@ Covers relaxation time, particle acceleration, stopping distance, and Stokes num
 ## Slides and Lecture Notes
 
 ~~~
-Slide Deck: <a href="https://docs.google.com/presentation/d/1TrGxm3thj1_sh1YpoX64k4zJ3e55cfxLLnm2YIJKVh8/edit?usp=sharing"> (link)</a> <br><br>
+Slide Deck: <a href="https://docs.google.com/presentation/d/1TrGxm3thj1_sh1YpoX64k4zJ3e55cfxLLnm2YIJKVh8/edit?usp=sharing">: link</a> <br><br>
 ~~~
 
 ~~~

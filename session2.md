@@ -14,11 +14,11 @@ The purpose of this lecture is to introduce the mathematical description of the 
 ## Slides and Lecture Notes
 
 ~~~
-Slide deck <a href="https://docs.google.com/presentation/d/17y7T163nqIGeAFZDbBIo4pL4hLMYcyf2tjVWJWxF3sY/edit?usp=sharing"> (link) </a> <br> <br>
+Slide Deck <a href="https://docs.google.com/presentation/d/17y7T163nqIGeAFZDbBIo4pL4hLMYcyf2tjVWJWxF3sY/edit?usp=sharing">: link </a> <br> <br>
 ~~~
 
 ~~~
-Lecture notebook <a href="https://mdpetters.github.io/cee233/notebooks/particle_size_statistics/"> (link) </a> <br> <br>
+Lecture Notebook <a href="https://mdpetters.github.io/cee233/notebooks/particle_size_statistics/"> Aerosol Size Distribution </a> <br> <br>
 ~~~
 
 

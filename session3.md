@@ -12,7 +12,7 @@ Reviews the behavior of gases based on statistical mechanics. The main concepts 
 ## Slides and Lecture Notes
 
 ~~~
-Slide Deck: <a href="https://docs.google.com/presentation/d/11p5s5FCknfCHMUxnZr-gu8v-N3qR5EPM7Q86vEAWoW0/edit?usp=sharing"> Notes</a>
+Slide Deck: <a href="https://docs.google.com/presentation/d/11p5s5FCknfCHMUxnZr-gu8v-N3qR5EPM7Q86vEAWoW0/edit?usp=sharing"> link</a>
 ~~~
 
 ## Reading

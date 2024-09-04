@@ -6,7 +6,7 @@ The purpose of this lecture is to introduce the basic mechanical properties of a
 ## Slides and Lecture Notes
 
 ~~~
-Slide Deck: <a href="https://docs.google.com/presentation/d/1hrCZVrK583cRGPbvUckbE_U0omod5GGjt2slIadlJVg/edit?usp=sharing"> (link)</a> <br><br>
+Slide Deck: <a href="https://docs.google.com/presentation/d/1hrCZVrK583cRGPbvUckbE_U0omod5GGjt2slIadlJVg/edit?usp=sharing">: link</a> <br><br>
 ~~~
 
 ~~~
