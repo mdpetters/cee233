@@ -25,5 +25,5 @@ Lecture Notebook <a href="https://mdpetters.github.io/cee233/notebooks/particle_
 ## Homework
 
 \exercise{
-Due April 18: Lecture notebook including synthesis assignment. 
+Lecture notebook including synthesis assignment.
 }

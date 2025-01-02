@@ -18,8 +18,6 @@ Reading: Hinds Chapter, 5.
 ## Homework
 
 \exercise{
-Due April 24, 2024: 
-
 1. Define Stokes number, relaxation time, stopping distance.
 2. Explain why the impactor size cutoff is characterized vs. the square root of the Stokes number.
 3. In words only, outline the derivation of the stopping distance of a particle (Eqs. 5.6-5.19).

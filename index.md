@@ -11,25 +11,23 @@ Markus Petters, Department of Chemical and Environmental Engineering \\
 Office: Center for Environmental Research & Technology of UCR | Room 128 \\
 Web: [https://mdpetters.github.io](https://mdpetters.github.io) \\
 Email: [markus.petters@ucr.edu](mailto:markus.petters@ucr.edu) \\
-Office Hours: Tu 12:20-13:20 pm (after class) 
+Office Hours: M 06:20-07:20 pm (after class) 
 
 #### Course Description
 Covers principles necessary to understand the atmospheric behavior of air pollutants. Topics include gas- and aerosol-phase chemistry, atmospheric diffusion, removal processes and residence times, and the formation and fate of gas and aerosol pollutants.
 
 #### Meeting Time/Location
-Lecture: Tu/Th 11:00 AM - 12:20 PM \\
-Location: Riverside Campus | Humanities and Social Sciences | Room 1406 \\
-Discussion: Tu 10:00 AM - 10:50 AM \\
-Location: Riverside Campus | Student Success Center | Room 216 \\
+Lecture: M/W 05:00 PM - 06:20 PM \\
+Location: Riverside Campus | Sproul Hall | Room 2344 \\
+Discussion: M 04:00 PM - 04:50 PM \\
+Location: Riverside Campus | Sproul Hall | Room 2344 \\
 
 #### Course Materials
 Students will need access to a laptop computer with scientific computing software installed. The choice of software is up to the student and may be one of the following: MATLAB, Python, R, or Julia. Students need to be able to run git from the command line and be able to install add-on packages on their device. The computer will be needed to complete exams. 
 
-
 ~~~
 Reading: <a href="https://www.wiley.com/en-us/Aerosol+Technology:+Properties,+Behavior,+and+Measurement+of+Airborne+Particles,+3rd+Edition-p-9781119494041"> Aerosol Technology </a> by William C. Hinds and Yifang Zhu.
 ~~~
-
 
 \outcomes{
 *At the end of the term, participants will be able*
@@ -53,14 +51,11 @@ The grade components in the class include:
 | Activity      | Weight | Details                                                        |
 | --------------|--------|----------------------------------------------------------------|
 | Participation | 10%    | Attendance and in-class activities.                            |
-| Homework      | 30%    | Each module will have one or more graded homework assignments. |
-| Midterm Exam  | 10%    | One midterm exam.                                              |
-| Project       | 20%    | Term Project.                                                  |
-| Final Exam    | 30%    | The final exam is cumulative.                                  |
+| Homework      | 50%    | Each module will have one or more graded homework assignments. |
+| Final Exam    | 40%    | The final exam is cumulative.                                  |
 
 The participation score will be based on physical presence and participation during in-class poll questions. The grade will be computed from the automatically generated grade book of the [Poll Everywhere](https://www.polleverywhere.com/home) platform. 
 
-Exams will mimic the homework assignments and are to be taken in person. They will be administered via GitHub Classroom. A laptop computer with appropriate software installed will be required for taking the exam.
 
 **Definition of Letter Grades**
 
@@ -107,27 +102,9 @@ Late homework will receive no credit. An extension may be granted if the student
 #### Methods of Student Instruction 
 - Slides: Slide deck presentation are used to deliver content
 - Lecture Notes: Handwritten lecture notes are used to deliver key derivations
-- Poll Everywhere: In-class polling questions for formative assessments 
-- GitHub Classroom: GitHub Classroom is used for homework projects 
+- Poll Everywhere: In-class polling questions for formative assessments
 - Pluto Notebooks: Pluto notebooks are used as reference text and demonstration of implementation of algorithms in computer language
 - Discussion Sessions: Discussion sessions are used for one-on-one instruction 
-
-#### Term Project
-You are tasked to design a field campaign to validate aerosol emissions at urban scale. You can pick the location (metropolitan area), emission type (e.g. mobile vs. stationary), aerosol type (black carbon vs. secondary organic aerosol vs. inorganic sources). The main objective is to design a measurement campaign that is (1) feasible, (2) affordable, and (3) compelling. Feasible means that it is logistically possible to conduct the measurements. Examples of feasibility include site access, instrument availability, and personnel availability. Affordable means that you are limited in the number of high quality instruments you can deploy. An example of "non-affordable" would be a campaign that requires a fleet of specialized aircraft. Compelling means that the data will provide meaningful constraints on the emissions given the limitations of your sensors and the geographical area. Examples of "not compelling" would be insufficient sensitivity of the selected sensor(s), insufficient temporal or spatial coverage, or interference by factors outside of your control, including meteorological factors. 
-    
-Evaluation will focus on the following aspects
-- Problem statement (description of the emission problem)
-- Feasibility analysis (is the project feasible)
-- Budget analysis (is the project affordable)
-- Engineering objectives analysis (is the project compelling)
-
-**Milestones**
-- April 9: Identification of title and 3-5 sentence abstract on envisioned scope
-- April 23: Problem statement and list of papers to be considered.
-- April 30: Campaign overview figure and outline of the proposed campaign
-- May 7: Feasibility and budget analysis
-- May 21: Engineering objective analysis
-- June 6: Presentation of project and final draft of term paper  
 
 #### Readings and Recommended Texts
 Reading material is provided in the form of online notebooks. Additional reading may be assigned on an ad-hoc basis.
@@ -167,7 +144,6 @@ Cheating is the giving, taking, or presenting of information or material by a st
 Students may be required to disclose personally identifiable information to other students in the course, via digital tools, such as email or web-postings, where relevant to the course. Examples include online discussions of class topics, and posting of student coursework. All students are expected to respect the privacy of each other by not sharing or using such information outside the course.
 
 *Digital Course Components:* Digital course components include 
-- GitHub Classroom platform.
 - Canvas Learning Management System
 - PollEverywhere
 - Jupyter Hub (Participation is optional)
@@ -179,21 +155,21 @@ It is the policy of the University of California Riverside not to engage in disc
 The use of laptop computers or tablet to follow the notebooks during lectures is permitted and encouraged.  
 
 #### Course Schedule
-| Tu     | Activity                   | Th     | Activity                     | 
-|--------|----------------------------|--------|------------------------------|
-| Apr 2  | Syllabus                   | Apr 4  | Introduction                 | 
-| Apr 9  | Aerosol Size Distribution  | Apr 11 | Kinetic Theory               |
-| Apr 16 | Uniform Particle Motion    | Apr 18 | Curvilinear Particle Motion  |
-| Apr 23 | Brownian Motion            | Apr 25 | Electrical Properties        | 
-| Apr 30 | Electrical Properties      | May 2  | Optical Properties           | 
-| May 7  | Optical Properties         | May 9  | Aerosol Climatology          | 
-| May 14 | **Midterm**                | May 16 | Aerosol Climatology          | 
-| May 21 | Aerosol Climatology        | May 23 | Evaporation and Condensation | 
-| May 28 | Evaporation and Condensation | May 30 | Carbonaceous Aerosol   | 
-| Jun 4  | Carbonaceous Aerosol       | Jun 6  | Presentations                |
+| M      | Activity                     | W      | Activity                     |
+|--------|------------------------------|--------|------------------------------|
+| Jan 6  | Syllabus/Introduction        | Jan 8  | Aerosol Size Distribution    |
+| Jan 13 | Kinetic Theory               | Jan 15 | Uniform Particle Motion      |
+| Jan 20 | *No Class (MLK Day)*         | Jan 22 | Curvilinear Particle Motion  |
+| Jan 27 | Brownian Motion              | Jan 29 | Electrical Properties        |
+| Feb 3  | Electrical Properties        | Feb 5  | Optical Properties           |
+| Feb 10 | Optical Properties           | Feb 12 | Aerosol Climatology          |
+| Feb 17 | *No Class (President Day)*   | Feb 19 | Aerosol Climatology          |
+| Feb 24 | Aerosol Climatology          | Feb 26 | Evaporation and Condensation |
+| Mar 3  | Evaporation and Condensation | Mar 5  | Carbonaceous Aerosol         |
+| Mar 10 | Carbonaceous Aerosol         | Mar 12 | Carbonaceous Aerosol         |
 
 \note{
-**Final exam: Monday, June 10, 8:00 AM - 11:00 AM**
+**Final exam: Saturday, March 15, 7:00 p.m. - 10:00 p.m.**
 }
 
 ~~~

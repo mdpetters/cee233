@@ -21,5 +21,5 @@ Hinds, Chapter 2
 ## Homework
 
 \exercise{
-Due April 16 2024: [Homework 3](https://docs.google.com/document/d/1H48niLzcan2gSxnBiEHxFT723OuABeouts_YG17j04g/edit?usp=sharing) 
+[Homework 3](https://docs.google.com/document/d/1H48niLzcan2gSxnBiEHxFT723OuABeouts_YG17j04g/edit?usp=sharing) 
 }

@@ -19,5 +19,5 @@ Reading: Hinds Chapter, 3.
 ## Homework
 
 \exercise{
-Due April, 24 2024: Lecture notebook including synthesis assignment.
+Lecture notebook including synthesis assignment.
 }

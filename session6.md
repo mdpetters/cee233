@@ -18,8 +18,6 @@ Reading: Hinds Chapters 7 and 8.
 ## Homework
 
 \exercise{
-Due May 2, 2024
- 
 *Problem 1:* A particle having diameter $D$ is located 5 cm above a surface in the
 atmosphere (e.g. the ocean). The particle contains -1 charge. Construct a Table that contrasts the following quantities using the units given in row 2:
 

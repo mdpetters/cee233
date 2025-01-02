@@ -27,7 +27,4 @@ Reading: Hinds Chapter 15.
 2. If a voltage of $-1400\; V$ is applied to the inner column, what is the nominal diameter of singly, doubly, and triply charged particles transmitted through the column. Estimate the relative fraction of singly, doubly, and triply charged particles transmitted. You can assume that the true number concentration is constant across all sizes. You can also assume charge equilibrium.
 3. A 100 nm particle with single charge is transmitted through the DMA. Assuming that you add a second charge to the particle, calculate what would its apparent diameter be when selected by a DMA.
 4. Plot the ideal Knutson and Whitby transfer function against mobility for this mode of instrument operation.
-
-
-
 }

@@ -34,5 +34,5 @@ Hinds, Chapter 1
 ## Homework
 
 \exercise{
-Due April 9 2024: [Homework 1](https://docs.google.com/document/d/1vF_-_lYQiCHsr-pJ-S0UpHihkv0AsgQgAnPl_jCY2qc/edit?usp=sharing)
+[Homework 1](https://docs.google.com/document/d/1vF_-_lYQiCHsr-pJ-S0UpHihkv0AsgQgAnPl_jCY2qc/edit?usp=sharing)
 }
